@@ -1,0 +1,64 @@
+ html{
+ font-size:20px;
+ }
+ a{
+ text-decoration:none;
+ color:black;
+ }
+ .flexcontainer{
+ display:flex;
+ justify-content:flex-start;
+ flex-wrap:wrap;
+ }
+ .flexcontainer [name]{
+ order:1;
+ width:25%;
+ box-sizing:border-box;
+ border:thin dotted gray;
+ }
+ .flexcontainer [name*="Prime"]{
+ order:3;
+ border:thin solid gold;
+ display:none;
+ }
+ .flexcontainer [name*="Vandal"]{
+ order:5;
+ display:none;
+ }
+ .flexcontainer [name*="Prisma"]{
+ order:7;
+ display:none;
+ }
+ .flexcontainer [name*="Wraith"]{
+ order:9;
+ display:none;
+ }
+ .flexcontainer [name*="Mara"]{
+ order:11;
+ display:none;
+ }
+ [class*="separator"]{
+ text-align:center;
+ box-sizing:border-box;
+ width:25%;
+ }
+.prime-separator{
+ order:2;
+ border: thin solid gold;
+}
+ .vandal-separator{
+ order:4;
+ border: thin solid blue;
+}
+ .prisma-separator{
+ order:6;
+ border: thin solid green;
+}
+ .wraith-separator{
+ order:8;
+ border: thin solid black;
+}
+ .mara-separator{
+ order:10;
+ border: thin solid red;
+}

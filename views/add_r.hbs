@@ -1,0 +1,30 @@
+<form action = "/add/Recipe" type="post">
+Collection ID:<select name="collection_id">
+<option value = ""> </option>
+{{#each recipeOptions}}
+<option value="{{this.[collection_id]}}">{{this.[collection_name]}}</option>
+{{/each}}
+</select> or new Blueprint ID <input type="text" name = "bp_id">
+<br/>
+Name: <input type = "text" name = "bp_name"/><br/>
+Component 1 qty: <input type = "text" name = "component1_qty">
+Component 1: <select name="component1_id_dd"><option val = ""></option>{{#each bpOptions}}<option value="{{this.[component_id]}}">{{this.[component_name]}}{{/each}}
+</option>
+</select> or new Component ID:<input type = "text" name="component1_id_in"/>
+<br/>
+Component 2 qty: <input type = "text" name = "component2_qty">
+Component 2: <select name="component2_id_dd"><option val = ""></option>{{#each bpOptions}}<option value="{{this.[component_id]}}">{{this.[component_name]}}{{/each}}
+</select> or new Component ID:<input type = "text" name="component2_id_in"/>
+<br/>
+Component 3 qty: <input type = "text" name = "component3_qty">
+Component 3: <select name="component3_id_dd"><option val = ""></option>{{#each bpOptions}}<option value="{{this.[component_id]}}">{{this.[component_name]}}{{/each}}
+</select> or new Component ID:<input type = "text" name="component3_id_in"/>
+<br/>
+Component 4 qty: <input type = "text" name = "component4_qty">
+Component 4: <select name="component4_id_dd"><option val = ""></option>{{#each bpOptions}}<option value="{{this.[component_id]}}">{{this.[component_name]}}{{/each}}
+</select> or new Component ID:<input type = "text"/ name="component4_id_in">
+<br/>
+Credit Cost: <input type="text" name = "credit_qty"/>
+<button type="submit" value ="Add">Add</button>
+</form>
+<title> Add recipe </title>

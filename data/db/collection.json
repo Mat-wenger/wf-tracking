@@ -1,0 +1,395 @@
+{"_id":{"$oid":"591b55180a2ecc362830e1c0"},"collection_name":"Ash","collection_id":"ash","class":"frame"}
+{"_id":{"$oid":"591b554b0a2ecc362830e1c1"},"collection_name":"Ash Prime","collection_id":"ash-p","class":"frame"}
+{"_id":{"$oid":"591b555c0a2ecc362830e1c2"},"collection_name":"Atlas","collection_id":"atls","class":"frame"}
+{"_id":{"$oid":"591b55620a2ecc362830e1c3"},"collection_name":"Banshee","collection_id":"bnsh","class":"frame"}
+{"_id":{"$oid":"591b556a0a2ecc362830e1c4"},"collection_name":"Banshee Prime","collection_id":"bnsh-p","class":"frame"}
+{"_id":{"$oid":"591b55740a2ecc362830e1c5"},"collection_name":"Chroma","collection_id":"crma","class":"frame"}
+{"_id":{"$oid":"591b55790a2ecc362830e1c6"},"collection_name":"Ember","collection_id":"embr","class":"frame"}
+{"_id":{"$oid":"591b557e0a2ecc362830e1c7"},"collection_name":"Ember Prime","collection_id":"embr-p","class":"frame"}
+{"_id":{"$oid":"591b55830a2ecc362830e1c8"},"collection_name":"Equinox","collection_id":"eqnx","class":"frame"}
+{"_id":{"$oid":"591b559a0a2ecc362830e1c9"},"collection_name":"Excalibur","collection_id":"xcal","class":"frame"}
+{"_id":{"$oid":"591b55a10a2ecc362830e1ca"},"collection_name":"Excalibur Prime","collection_id":"xcal-p","class":"frame"}
+{"_id":{"$oid":"591b55a80a2ecc362830e1cb"},"collection_name":"Frost","collection_id":"frst","class":"frame"}
+{"_id":{"$oid":"591b55ad0a2ecc362830e1cc"},"collection_name":"Frost Prime","collection_id":"frst-p","class":"frame"}
+{"_id":{"$oid":"591b55b30a2ecc362830e1cd"},"collection_name":"Harrow","collection_id":"hrrw","class":"frame"}
+{"_id":{"$oid":"591b55bb0a2ecc362830e1ce"},"collection_name":"Hydroid","collection_id":"hdrd","class":"frame"}
+{"_id":{"$oid":"591b55c00a2ecc362830e1cf"},"collection_name":"Inaros","collection_id":"inrs","class":"frame"}
+{"_id":{"$oid":"591b55c60a2ecc362830e1d0"},"collection_name":"Ivara","collection_id":"ivra","class":"frame"}
+{"_id":{"$oid":"591b55cd0a2ecc362830e1d1"},"collection_name":"Limbo","collection_id":"lmbo","class":"frame"}
+{"_id":{"$oid":"591b55d00a2ecc362830e1d2"},"collection_name":"Loki","collection_id":"loki","class":"frame"}
+{"_id":{"$oid":"591b55d50a2ecc362830e1d3"},"collection_name":"Loki Prime","collection_id":"loki-p","class":"frame"}
+{"_id":{"$oid":"591b55d80a2ecc362830e1d4"},"collection_name":"Mag","collection_id":"mag","class":"frame"}
+{"_id":{"$oid":"591b55dc0a2ecc362830e1d5"},"collection_name":"Mag Prime","collection_id":"mag-p","class":"frame"}
+{"_id":{"$oid":"591b55e00a2ecc362830e1d6"},"collection_name":"Mesa","collection_id":"mesa","class":"frame"}
+{"_id":{"$oid":"591b55e60a2ecc362830e1d7"},"collection_name":"Mirage","collection_id":"mrge","class":"frame"}
+{"_id":{"$oid":"591b55ec0a2ecc362830e1d8"},"collection_name":"Nekros","collection_id":"nkro","class":"frame"}
+{"_id":{"$oid":"591b55f20a2ecc362830e1d9"},"collection_name":"Nekros Prime","collection_id":"nkro-p","class":"frame"}
+{"_id":{"$oid":"591b55fa0a2ecc362830e1da"},"collection_name":"Nezha","collection_id":"nzha","class":"frame"}
+{"_id":{"$oid":"591b56b30a2ecc362830e1db"},"collection_name":"Nidus","collection_id":"ndus","class":"frame"}
+{"_id":{"$oid":"591b56b60a2ecc362830e1dc"},"collection_name":"Nova","collection_id":"nova","class":"frame"}
+{"_id":{"$oid":"591b56bb0a2ecc362830e1dd"},"collection_name":"Nova Prime","collection_id":"nova-p","class":"frame"}
+{"_id":{"$oid":"591b56be0a2ecc362830e1de"},"collection_name":"Nyx","collection_id":"nyx","class":"frame"}
+{"_id":{"$oid":"591b56c30a2ecc362830e1df"},"collection_name":"Nyx Prime","collection_id":"nyx-p","class":"frame"}
+{"_id":{"$oid":"591b56c90a2ecc362830e1e0"},"collection_name":"Oberon","collection_id":"obrn","class":"frame"}
+{"_id":{"$oid":"591b56d50a2ecc362830e1e1"},"collection_name":"Octavia","collection_id":"octv","class":"frame"}
+{"_id":{"$oid":"591b56d90a2ecc362830e1e2"},"collection_name":"Rhino","collection_id":"rhno","class":"frame"}
+{"_id":{"$oid":"591b56de0a2ecc362830e1e3"},"collection_name":"Rhino Prime","collection_id":"rhno-p","class":"frame"}
+{"_id":{"$oid":"591b56e80a2ecc362830e1e4"},"collection_name":"Saryn","collection_id":"sryn","class":"frame"}
+{"_id":{"$oid":"591b56ee0a2ecc362830e1e5"},"collection_name":"Saryn Prime","collection_id":"sryn-p","class":"frame"}
+{"_id":{"$oid":"591b56fb0a2ecc362830e1e6"},"collection_name":"Titania","collection_id":"ttna","class":"frame"}
+{"_id":{"$oid":"591b57000a2ecc362830e1e7"},"collection_name":"Trinity","collection_id":"trin","class":"frame"}
+{"_id":{"$oid":"591b57040a2ecc362830e1e8"},"collection_name":"Trinity Prime","collection_id":"trin-p","class":"frame"}
+{"_id":{"$oid":"591b570a0a2ecc362830e1e9"},"collection_name":"Valkyr","collection_id":"vlkr","class":"frame"}
+{"_id":{"$oid":"591b57170a2ecc362830e1ea"},"collection_name":"Valkyr Prime","collection_id":"vlkr-p","class":"frame"}
+{"_id":{"$oid":"591b571e0a2ecc362830e1eb"},"collection_name":"Vauban","collection_id":"vubn","class":"frame"}
+{"_id":{"$oid":"591b57250a2ecc362830e1ec"},"collection_name":"Vauban Prime","collection_id":"vubn-p","class":"frame"}
+{"_id":{"$oid":"591b572a0a2ecc362830e1ed"},"collection_name":"Volt","collection_id":"volt","class":"frame"}
+{"_id":{"$oid":"591b572e0a2ecc362830e1ee"},"collection_name":"Volt Prime","collection_id":"volt-p","class":"frame"}
+{"_id":{"$oid":"591b57340a2ecc362830e1ef"},"collection_name":"Wukong","collection_id":"wkng","class":"frame"}
+{"_id":{"$oid":"591b57380a2ecc362830e1f0"},"collection_name":"Zephyr","collection_id":"zphr","class":"frame"}
+{"_id":{"$oid":"591c7ea72b34ad4690d7774d"},"collection_name":"Amesha","collection_id":"amsh","class":"wing"}
+{"_id":{"$oid":"591c7eb72b34ad4690d7774e"},"collection_name":"Elytron","collection_id":"lytr","class":"wing"}
+{"_id":{"$oid":"591c7ec22b34ad4690d7774f"},"collection_name":"Itzal","collection_id":"itzl","class":"wing"}
+{"_id":{"$oid":"591c7ece2b34ad4690d77750"},"collection_name":"Odonata","collection_id":"odnt","class":"wing"}
+{"_id":{"$oid":"591c7ed82b34ad4690d77751"},"collection_name":"Odonata Prime","collection_id":"odnt-p","class":"wing"}
+{"_id":{"$oid":"591c7ee82b34ad4690d77752"},"collection_name":"Huras Kubrow","collection_id":"hras","class":"comp"}
+{"_id":{"$oid":"591c7ef82b34ad4690d77753"},"collection_name":"Raksa Kubrow","collection_id":"rksa","class":"comp"}
+{"_id":{"$oid":"591c7f062b34ad4690d77754"},"collection_name":"Sahasa Kubrow","collection_id":"shsa","class":"comp"}
+{"_id":{"$oid":"591c7f152b34ad4690d77755"},"collection_name":"Sunika Kubrow","collection_id":"snka","class":"comp"}
+{"_id":{"$oid":"591c7f222b34ad4690d77756"},"collection_name":"Chesa Kubrow","collection_id":"chsa","class":"comp"}
+{"_id":{"$oid":"591c7f3d2b34ad4690d77757"},"collection_name":"Helminth Charger","collection_id":"hlmt","class":"comp"}
+{"_id":{"$oid":"591c7f522b34ad4690d77758"},"collection_name":"Adarza Kavat","collection_id":"arzk","class":"comp"}
+{"_id":{"$oid":"591c7f5f2b34ad4690d77759"},"collection_name":"Smeeta Kavat","collection_id":"smtk","class":"comp"}
+{"_id":{"$oid":"591c7f992b34ad4690d7775a"},"collection_name":"Carrier","collection_id":"crer","class":"sent"}
+{"_id":{"$oid":"591c7fa22b34ad4690d7775b"},"collection_name":"Carrier Prime","collection_id":"crer-p","class":"sent"}
+{"_id":{"$oid":"591c7fbb2b34ad4690d7775c"},"collection_name":"Dethcube","collection_id":"cube","class":"sent"}
+{"_id":{"$oid":"591c801e2b34ad4690d7775d"},"collection_name":"Diriga","collection_id":"drga","class":"sent"}
+{"_id":{"$oid":"591c80272b34ad4690d7775e"},"collection_name":"Djinn","collection_id":"djin","class":"sent"}
+{"_id":{"$oid":"591c80322b34ad4690d7775f"},"collection_name":"Helios","collection_id":"hlos","class":"sent"}
+{"_id":{"$oid":"591c804f2b34ad4690d77760"},"collection_name":"Helios Prime","collection_id":"hlos-p","class":"sent"}
+{"_id":{"$oid":"591c805a2b34ad4690d77761"},"collection_name":"Shade","collection_id":"shde","class":"sent"}
+{"_id":{"$oid":"591c80662b34ad4690d77762"},"collection_name":"Prisma Shade","collection_id":"shde-r","class":"sent"}
+{"_id":{"$oid":"591c806e2b34ad4690d77763"},"collection_name":"Taxon","collection_id":"txon","class":"sent"}
+{"_id":{"$oid":"591c80772b34ad4690d77764"},"collection_name":"Wyrm","collection_id":"wyrm","class":"sent"}
+{"_id":{"$oid":"591c80802b34ad4690d77765"},"collection_name":"Wyrm Prime","collection_id":"wyrm-p","class":"sent"}
+{"_id":{"$oid":"591c80a22b34ad4690d77766"},"collection_name":"Artax","collection_id":"rtax","class":"sntw"}
+{"_id":{"$oid":"591c80b12b34ad4690d77767"},"collection_name":"Deconstructor","collection_id":"dcon","class":"sntw"}
+{"_id":{"$oid":"591c80c12b34ad4690d77768"},"collection_name":"Deconstructor Prime","collection_id":"dcon-p","class":"sntw"}
+{"_id":{"$oid":"591c80d42b34ad4690d77769"},"collection_name":"Deth Machine Rifle","collection_id":"dmrl","class":"sntw"}
+{"_id":{"$oid":"591c80e92b34ad4690d7776a"},"collection_name":"Burst Laser","collection_id":"btlr","class":"sntw"}
+{"_id":{"$oid":"591c80f62b34ad4690d7776b"},"collection_name":"Prisma Burst Laser","collection_id":"btlr-r","class":"sntw"}
+{"_id":{"$oid":"591c81312b34ad4690d7776c"},"collection_name":"Laser Rifle","collection_id":"lrrl","class":"sntw"}
+{"_id":{"$oid":"591c813b2b34ad4690d7776d"},"collection_name":"Laser Rifle Prime","collection_id":"lrrl-p","class":"sntw"}
+{"_id":{"$oid":"591c81452b34ad4690d7776e"},"collection_name":"Stinger","collection_id":"stgr","class":"sntw"}
+{"_id":{"$oid":"591c81502b34ad4690d7776f"},"collection_name":"Sweeper","collection_id":"swpr","class":"sntw"}
+{"_id":{"$oid":"591c815f2b34ad4690d77770"},"collection_name":"Sweeper Prime","collection_id":"swpr-p","class":"sntw"}
+{"_id":{"$oid":"591c816b2b34ad4690d77771"},"collection_name":"Vulklok","collection_id":"vlkl","class":"sntw"}
+{"_id":{"$oid":"591c92f2fd32363e78a66b3d"},"collection_name":"Centaur","collection_id":"cntr","class":"wmel"}
+{"_id":{"$oid":"591c9306fd32363e78a66b3e"},"collection_name":"Agkuza","collection_id":"agkz","class":"wmel"}
+{"_id":{"$oid":"591c930ffd32363e78a66b3f"},"collection_name":"Kaszas","collection_id":"kszs","class":"wmel"}
+{"_id":{"$oid":"591c931cfd32363e78a66b40"},"collection_name":"Rathbone","collection_id":"rtbn","class":"wmel"}
+{"_id":{"$oid":"591c9326fd32363e78a66b41"},"collection_name":"Onorix","collection_id":"onrx","class":"wmel"}
+{"_id":{"$oid":"591c9330fd32363e78a66b42"},"collection_name":"Knux","collection_id":"knux","class":"wmel"}
+{"_id":{"$oid":"591c933dfd32363e78a66b43"},"collection_name":"Prisma Veritux","collection_id":"vrtx-r","class":"wmel"}
+{"_id":{"$oid":"591c934bfd32363e78a66b44"},"collection_name":"Veritux","collection_id":"vrtx","class":"wmel"}
+{"_id":{"$oid":"591c9355fd32363e78a66b45"},"collection_name":"Fluctus","collection_id":"flts","class":"wprm"}
+{"_id":{"$oid":"591c9364fd32363e78a66b46"},"collection_name":"Velocitus","collection_id":"vlts","class":"wprm"}
+{"_id":{"$oid":"591c9370fd32363e78a66b47"},"collection_name":"Dual Decurion","collection_id":"ddrn","class":"wprm"}
+{"_id":{"$oid":"591c937cfd32363e78a66b48"},"collection_name":"Imperator Vandal","collection_id":"impr-v","class":"wprm"}
+{"_id":{"$oid":"591c9386fd32363e78a66b49"},"collection_name":"Phaedra","collection_id":"pdra","class":"wprm"}
+{"_id":{"$oid":"591c9390fd32363e78a66b4a"},"collection_name":"Cyngas","collection_id":"cngs","class":"wprm"}
+{"_id":{"$oid":"591c9399fd32363e78a66b4b"},"collection_name":"Corvas","collection_id":"crvs","class":"wprm"}
+{"_id":{"$oid":"591c93affd32363e78a66b4c"},"collection_name":"Grattler","collection_id":"grtl","class":"wprm"}
+{"_id":{"$oid":"591c93b9fd32363e78a66b4d"},"collection_name":"Imperator","collection_id":"impr","class":"wprm"}
+{"_id":{"$oid":"591c9ae4bf623d42740eeeb8"},"collection_name":"Amprex","collection_id":"mprx","class":"prmy"}
+{"_id":{"$oid":"591c9ae9bf623d42740eeeb9"},"collection_name":"Attica","collection_id":"atca","class":"prmy"}
+{"_id":{"$oid":"591c9aefbf623d42740eeeba"},"collection_name":"Boar","collection_id":"boar","class":"prmy"}
+{"_id":{"$oid":"591c9af6bf623d42740eeebb"},"collection_name":"Boar Prime","collection_id":"boar-p","class":"prmy"}
+{"_id":{"$oid":"591c9afbbf623d42740eeebc"},"collection_name":"Boltor","collection_id":"bltr","class":"prmy"}
+{"_id":{"$oid":"591c9b01bf623d42740eeebd"},"collection_name":"Boltor Prime","collection_id":"bltr-p","class":"prmy"}
+{"_id":{"$oid":"591c9b0cbf623d42740eeebe"},"collection_name":"Telos Boltor","collection_id":"bltr-s","class":"prmy"}
+{"_id":{"$oid":"591c9b11bf623d42740eeebf"},"collection_name":"Braton","collection_id":"brtn","class":"prmy"}
+{"_id":{"$oid":"591c9b18bf623d42740eeec0"},"collection_name":"Braton Prime","collection_id":"brtn-p","class":"prmy"}
+{"_id":{"$oid":"591c9b20bf623d42740eeec1"},"collection_name":"Braton Vandal","collection_id":"brtn-v","class":"prmy"}
+{"_id":{"$oid":"591c9b2cbf623d42740eeec2"},"collection_name":"MK1 Braton","collection_id":"brtn-j","class":"prmy"}
+{"_id":{"$oid":"591c9b31bf623d42740eeec3"},"collection_name":"Burston","collection_id":"brst","class":"prmy"}
+{"_id":{"$oid":"591c9b39bf623d42740eeec4"},"collection_name":"Burston Prime","collection_id":"brst-p","class":"prmy"}
+{"_id":{"$oid":"591c9b40bf623d42740eeec5"},"collection_name":"Buzlok","collection_id":"bzlk","class":"prmy"}
+{"_id":{"$oid":"591c9b45bf623d42740eeec6"},"collection_name":"Cernos","collection_id":"crns","class":"prmy"}
+{"_id":{"$oid":"591c9b4cbf623d42740eeec7"},"collection_name":"Cernos Prime","collection_id":"crns-p","class":"prmy"}
+{"_id":{"$oid":"591c9b56bf623d42740eeec8"},"collection_name":"Rakta Cernos","collection_id":"crns-s","class":"prmy"}
+{"_id":{"$oid":"591c9b61bf623d42740eeec9"},"collection_name":"Convectrix","collection_id":"cnvx","class":"prmy"}
+{"_id":{"$oid":"591c9b67bf623d42740eeeca"},"collection_name":"Daikyu","collection_id":"dkyu","class":"prmy"}
+{"_id":{"$oid":"591c9b6bbf623d42740eeecb"},"collection_name":"Dera","collection_id":"dera","class":"prmy"}
+{"_id":{"$oid":"591c9b70bf623d42740eeecc"},"collection_name":"Dera Vandal","collection_id":"dera-v","class":"prmy"}
+{"_id":{"$oid":"591c9b77bf623d42740eeecd"},"collection_name":"Dex Sybaris","collection_id":"dx-ss","class":"prmy"}
+{"_id":{"$oid":"591c9b7ebf623d42740eeece"},"collection_name":"Drakgoon","collection_id":"dkgn","class":"prmy"}
+{"_id":{"$oid":"591c9b82bf623d42740eeecf"},"collection_name":"Dread","collection_id":"dred","class":"prmy"}
+{"_id":{"$oid":"591c9b8fbf623d42740eeed0"},"collection_name":"Ferrox","collection_id":"frrx","class":"prmy"}
+{"_id":{"$oid":"591c9b96bf623d42740eeed1"},"collection_name":"Flux Rifle","collection_id":"flxr","class":"prmy"}
+{"_id":{"$oid":"591c9b9abf623d42740eeed2"},"collection_name":"Gorgon","collection_id":"grgn","class":"prmy"}
+{"_id":{"$oid":"591c9ba2bf623d42740eeed3"},"collection_name":"Gorgon Wraith","collection_id":"grgn-w","class":"prmy"}
+{"_id":{"$oid":"591c9bb3bf623d42740eeed4"},"collection_name":"Prisma Gorgon","collection_id":"grgn-r","class":"prmy"}
+{"_id":{"$oid":"591c9bbabf623d42740eeed5"},"collection_name":"Grakata","collection_id":"grka","class":"prmy"}
+{"_id":{"$oid":"591c9bc2bf623d42740eeed6"},"collection_name":"Prisma Grakata","collection_id":"grka-r","class":"prmy"}
+{"_id":{"$oid":"591c9bc9bf623d42740eeed7"},"collection_name":"Grinlok","collection_id":"grlk","class":"prmy"}
+{"_id":{"$oid":"591c9bcdbf623d42740eeed8"},"collection_name":"Harpak","collection_id":"hrpk","class":"prmy"}
+{"_id":{"$oid":"591c9bd1bf623d42740eeed9"},"collection_name":"Hek","collection_id":"hek","class":"prmy"}
+{"_id":{"$oid":"591c9bd7bf623d42740eeeda"},"collection_name":"Vaykor Hek","collection_id":"hek-s","class":"prmy"}
+{"_id":{"$oid":"591c9bddbf623d42740eeedb"},"collection_name":"Hema","collection_id":"hema","class":"prmy"}
+{"_id":{"$oid":"591c9be0bf623d42740eeedc"},"collection_name":"Hind","collection_id":"hind","class":"prmy"}
+{"_id":{"$oid":"591c9be6bf623d42740eeedd"},"collection_name":"Ignis","collection_id":"igns","class":"prmy"}
+{"_id":{"$oid":"591c9beebf623d42740eeede"},"collection_name":"Ignis Wraith","collection_id":"igns-w","class":"prmy"}
+{"_id":{"$oid":"591c9bf4bf623d42740eeedf"},"collection_name":"Javlok","collection_id":"jvlk","class":"prmy"}
+{"_id":{"$oid":"591c9bfabf623d42740eeee0"},"collection_name":"Karak","collection_id":"kark","class":"prmy"}
+{"_id":{"$oid":"591c9c02bf623d42740eeee1"},"collection_name":"Karak Wraith","collection_id":"kark-w","class":"prmy"}
+{"_id":{"$oid":"591c9c06bf623d42740eeee2"},"collection_name":"Kohm","collection_id":"kohm","class":"prmy"}
+{"_id":{"$oid":"591c9c10bf623d42740eeee3"},"collection_name":"Lanka","collection_id":"lnka","class":"prmy"}
+{"_id":{"$oid":"591c9c14bf623d42740eeee4"},"collection_name":"Latron","collection_id":"ltrn","class":"prmy"}
+{"_id":{"$oid":"591c9c18bf623d42740eeee5"},"collection_name":"Latron Prime","collection_id":"ltrn-p","class":"prmy"}
+{"_id":{"$oid":"591c9c1ebf623d42740eeee6"},"collection_name":"Latron Wraith","collection_id":"ltrn-w","class":"prmy"}
+{"_id":{"$oid":"591c9c2bbf623d42740eeee7"},"collection_name":"Miter","collection_id":"mter","class":"prmy"}
+{"_id":{"$oid":"591c9c33bf623d42740eeee8"},"collection_name":"Mutalist Cernos","collection_id":"mcrs","class":"prmy"}
+{"_id":{"$oid":"591c9c3abf623d42740eeee9"},"collection_name":"Mutalist Quanta","collection_id":"mqnt","class":"prmy"}
+{"_id":{"$oid":"591c9c3ebf623d42740eeeea"},"collection_name":"Ogris","collection_id":"ogrs","class":"prmy"}
+{"_id":{"$oid":"591c9c43bf623d42740eeeeb"},"collection_name":"Opticor","collection_id":"optc","class":"prmy"}
+{"_id":{"$oid":"591c9c49bf623d42740eeeec"},"collection_name":"Panthera","collection_id":"pntr","class":"prmy"}
+{"_id":{"$oid":"591c9c4fbf623d42740eeeed"},"collection_name":"Paracyst","collection_id":"prct","class":"prmy"}
+{"_id":{"$oid":"591c9c54bf623d42740eeeee"},"collection_name":"Paris","collection_id":"pars","class":"prmy"}
+{"_id":{"$oid":"591c9c59bf623d42740eeeef"},"collection_name":"Paris Prime","collection_id":"pars-p","class":"prmy"}
+{"_id":{"$oid":"591c9c63bf623d42740eeef0"},"collection_name":"MK1 Paris","collection_id":"paris-j","class":"prmy"}
+{"_id":{"$oid":"591c9c66bf623d42740eeef1"},"collection_name":"Penta","collection_id":"pnta","class":"prmy"}
+{"_id":{"$oid":"591c9c6cbf623d42740eeef2"},"collection_name":"Secura Penta","collection_id":"pnta-s","class":"prmy"}
+{"_id":{"$oid":"591c9c78bf623d42740eeef3"},"collection_name":"Phage","collection_id":"phge","class":"prmy"}
+{"_id":{"$oid":"591c9c7cbf623d42740eeef4"},"collection_name":"Quanta","collection_id":"qnta","class":"prmy"}
+{"_id":{"$oid":"591c9c81bf623d42740eeef5"},"collection_name":"Quanta Vandal","collection_id":"qnta-v","class":"prmy"}
+{"_id":{"$oid":"591c9c8bbf623d42740eeef6"},"collection_name":"Rubico","collection_id":"rbco","class":"prmy"}
+{"_id":{"$oid":"591c9c91bf623d42740eeef7"},"collection_name":"Simulor","collection_id":"smlr","class":"prmy"}
+{"_id":{"$oid":"591c9c98bf623d42740eeef8"},"collection_name":"Synoid Simulor","collection_id":"smlr-s","class":"prmy"}
+{"_id":{"$oid":"591c9c9dbf623d42740eeef9"},"collection_name":"Snipetron","collection_id":"sptn","class":"prmy"}
+{"_id":{"$oid":"591c9ca3bf623d42740eeefa"},"collection_name":"Snipetron Vandal","collection_id":"sptn-v","class":"prmy"}
+{"_id":{"$oid":"591c9ca8bf623d42740eeefb"},"collection_name":"Sobek","collection_id":"sbek","class":"prmy"}
+{"_id":{"$oid":"591c9cabbf623d42740eeefc"},"collection_name":"Soma","collection_id":"soma","class":"prmy"}
+{"_id":{"$oid":"591c9cafbf623d42740eeefd"},"collection_name":"Soma Prime","collection_id":"soma-p","class":"prmy"}
+{"_id":{"$oid":"591c9cb7bf623d42740eeefe"},"collection_name":"Stradavar","collection_id":"sdvr","class":"prmy"}
+{"_id":{"$oid":"591c9cc0bf623d42740eeeff"},"collection_name":"Strun","collection_id":"strn","class":"prmy"}
+{"_id":{"$oid":"591c9cc9bf623d42740eef00"},"collection_name":"MK1 Strun","collection_id":"strn-j","class":"prmy"}
+{"_id":{"$oid":"591c9cd2bf623d42740eef01"},"collection_name":"Strun Wraith","collection_id":"strn-w","class":"prmy"}
+{"_id":{"$oid":"591c9cd6bf623d42740eef02"},"collection_name":"Supra","collection_id":"spra","class":"prmy"}
+{"_id":{"$oid":"591c9cddbf623d42740eef03"},"collection_name":"Supra Vandal","collection_id":"spra-v","class":"prmy"}
+{"_id":{"$oid":"591c9ce2bf623d42740eef04"},"collection_name":"Sybaris","collection_id":"sbrs","class":"prmy"}
+{"_id":{"$oid":"591c9ce9bf623d42740eef05"},"collection_name":"Synapse","collection_id":"snps","class":"prmy"}
+{"_id":{"$oid":"591c9cecbf623d42740eef06"},"collection_name":"Tenora","collection_id":"tnra","class":"prmy"}
+{"_id":{"$oid":"591c9cf0bf623d42740eef07"},"collection_name":"Tetra","collection_id":"ttra","class":"prmy"}
+{"_id":{"$oid":"591c9d11bf623d42740eef08"},"collection_name":"Prisma Tetra","collection_id":"ttra-r","class":"prmy"}
+{"_id":{"$oid":"591c9d1abf623d42740eef09"},"collection_name":"Tiberon","collection_id":"tron","class":"prmy"}
+{"_id":{"$oid":"591c9d44bf623d42740eef0a"},"collection_name":"Tigris","collection_id":"tgrs","class":"prmy"}
+{"_id":{"$oid":"591c9d4cbf623d42740eef0b"},"collection_name":"Tigris Prime","collection_id":"tgrs-p","class":"prmy"}
+{"_id":{"$oid":"591c9d54bf623d42740eef0c"},"collection_name":"Sancti Tigris","collection_id":"tgrs-s","class":"prmy"}
+{"_id":{"$oid":"591c9d57bf623d42740eef0d"},"collection_name":"Tonkor","collection_id":"tnkr","class":"prmy"}
+{"_id":{"$oid":"591c9d5cbf623d42740eef0e"},"collection_name":"Torid","collection_id":"trid","class":"prmy"}
+{"_id":{"$oid":"591c9d62bf623d42740eef0f"},"collection_name":"Vectis","collection_id":"vcts","class":"prmy"}
+{"_id":{"$oid":"591c9d6bbf623d42740eef10"},"collection_name":"Vectis Prime","collection_id":"vcts-p","class":"prmy"}
+{"_id":{"$oid":"591c9d75bf623d42740eef11"},"collection_name":"Vulkar","collection_id":"vukr","class":"prmy"}
+{"_id":{"$oid":"591c9d80bf623d42740eef12"},"collection_name":"Vulkar Wraith","collection_id":"vukr-w","class":"prmy"}
+{"_id":{"$oid":"591c9d86bf623d42740eef13"},"collection_name":"Zarr","collection_id":"zarr","class":"prmy"}
+{"_id":{"$oid":"591c9d8bbf623d42740eef14"},"collection_name":"Zenith","collection_id":"znth","class":"prmy"}
+{"_id":{"$oid":"591c9d90bf623d42740eef15"},"collection_name":"Zhuge","collection_id":"zuge","class":"prmy"}
+{"_id":{"$oid":"591ca218bf623d42740eef16"},"collection_name":"Acrid","collection_id":"acrd","class":"sdry"}
+{"_id":{"$oid":"591ca221bf623d42740eef17"},"collection_name":"Afuris","collection_id":"afrs","class":"sdry"}
+{"_id":{"$oid":"591ca228bf623d42740eef18"},"collection_name":"Akbolto","collection_id":"akbl","class":"sdry"}
+{"_id":{"$oid":"591ca22fbf623d42740eef19"},"collection_name":"Telos Akbolto","collection_id":"akbl-s","class":"sdry"}
+{"_id":{"$oid":"591ca237bf623d42740eef1a"},"collection_name":"Akbronco","collection_id":"abnc","class":"sdry"}
+{"_id":{"$oid":"591ca23fbf623d42740eef1b"},"collection_name":"Akbronco Prime","collection_id":"abnc-p","class":"sdry"}
+{"_id":{"$oid":"591ca246bf623d42740eef1c"},"collection_name":"Akjagara","collection_id":"agra","class":"sdry"}
+{"_id":{"$oid":"591ca24cbf623d42740eef1d"},"collection_name":"Aklato","collection_id":"alto","class":"sdry"}
+{"_id":{"$oid":"591ca251bf623d42740eef1e"},"collection_name":"Aklex","collection_id":"alex","class":"sdry"}
+{"_id":{"$oid":"591ca255bf623d42740eef1f"},"collection_name":"Aklex Prime","collection_id":"alex-p","class":"sdry"}
+{"_id":{"$oid":"591ca25dbf623d42740eef20"},"collection_name":"Akmagnus","collection_id":"amgs","class":"sdry"}
+{"_id":{"$oid":"591ca261bf623d42740eef21"},"collection_name":"Aksomati","collection_id":"asmt","class":"sdry"}
+{"_id":{"$oid":"591ca268bf623d42740eef22"},"collection_name":"Akstiletto","collection_id":"aslt","class":"sdry"}
+{"_id":{"$oid":"591ca270bf623d42740eef23"},"collection_name":"Akstiletto Prime","collection_id":"aslt-p","class":"sdry"}
+{"_id":{"$oid":"591ca278bf623d42740eef24"},"collection_name":"Akvasto","collection_id":"avst","class":"sdry"}
+{"_id":{"$oid":"591ca280bf623d42740eef25"},"collection_name":"Akzani","collection_id":"azni","class":"sdry"}
+{"_id":{"$oid":"591ca28cbf623d42740eef26"},"collection_name":"Angstrum","collection_id":"anrm","class":"sdry"}
+{"_id":{"$oid":"591ca293bf623d42740eef27"},"collection_name":"Atomos","collection_id":"atms","class":"sdry"}
+{"_id":{"$oid":"591ca298bf623d42740eef28"},"collection_name":"Azima","collection_id":"azma","class":"sdry"}
+{"_id":{"$oid":"591ca29ebf623d42740eef29"},"collection_name":"Ballistica","collection_id":"blst","class":"sdry"}
+{"_id":{"$oid":"591ca2a5bf623d42740eef2a"},"collection_name":"Rakta Ballistica","collection_id":"blst-s","class":"sdry"}
+{"_id":{"$oid":"591ca2aabf623d42740eef2b"},"collection_name":"Bolto","collection_id":"blto","class":"sdry"}
+{"_id":{"$oid":"591ca2afbf623d42740eef2c"},"collection_name":"Brakk","collection_id":"brkk","class":"sdry"}
+{"_id":{"$oid":"591ca2bbbf623d42740eef2d"},"collection_name":"Bronco","collection_id":"brnc","class":"sdry"}
+{"_id":{"$oid":"591ca2c3bf623d42740eef2e"},"collection_name":"Bronco Prime","collection_id":"brnc-p","class":"sdry"}
+{"_id":{"$oid":"591ca2c9bf623d42740eef2f"},"collection_name":"Castanas","collection_id":"cstn","class":"sdry"}
+{"_id":{"$oid":"591ca2d1bf623d42740eef30"},"collection_name":"Sancti Castanas","collection_id":"cstn-s","class":"sdry"}
+{"_id":{"$oid":"591ca2d8bf623d42740eef31"},"collection_name":"Cestra","collection_id":"cstr","class":"sdry"}
+{"_id":{"$oid":"591ca2dfbf623d42740eef32"},"collection_name":"Cycron","collection_id":"cycr","class":"sdry"}
+{"_id":{"$oid":"591ca2e4bf623d42740eef33"},"collection_name":"Despair","collection_id":"dspr","class":"sdry"}
+{"_id":{"$oid":"591ca2e8bf623d42740eef34"},"collection_name":"Detron","collection_id":"dtrn","class":"sdry"}
+{"_id":{"$oid":"591ca2eebf623d42740eef35"},"collection_name":"Mara Detron","collection_id":"dtrn-m","class":"sdry"}
+{"_id":{"$oid":"591ca2f5bf623d42740eef36"},"collection_name":"Dex Furis","collection_id":"dfrs","class":"sdry"}
+{"_id":{"$oid":"591ca2febf623d42740eef37"},"collection_name":"Dual Cestra","collection_id":"dcsr","class":"sdry"}
+{"_id":{"$oid":"591ca306bf623d42740eef38"},"collection_name":"Secura Dual Cestra","collection_id":"dcsr-s","class":"sdry"}
+{"_id":{"$oid":"591ca30dbf623d42740eef39"},"collection_name":"Dual Toxocyst","collection_id":"dtox","class":"sdry"}
+{"_id":{"$oid":"591ca317bf623d42740eef3a"},"collection_name":"Embolist","collection_id":"mbls","class":"sdry"}
+{"_id":{"$oid":"591ca31fbf623d42740eef3b"},"collection_name":"Euphona Prime","collection_id":"ephn-p","class":"sdry"}
+{"_id":{"$oid":"591ca324bf623d42740eef3c"},"collection_name":"Furis","collection_id":"furs","class":"sdry"}
+{"_id":{"$oid":"591ca32ebf623d42740eef3d"},"collection_name":"MK1 Furis","collection_id":"furs-j","class":"sdry"}
+{"_id":{"$oid":"591ca333bf623d42740eef3e"},"collection_name":"Gammacor","collection_id":"gmcr","class":"sdry"}
+{"_id":{"$oid":"591ca33bbf623d42740eef3f"},"collection_name":"Synoid Gammacor","collection_id":"gmcr-s","class":"sdry"}
+{"_id":{"$oid":"591ca342bf623d42740eef40"},"collection_name":"Hikou","collection_id":"hiku","class":"sdry"}
+{"_id":{"$oid":"591ca349bf623d42740eef41"},"collection_name":"Hikou Prime","collection_id":"hiku-p","class":"sdry"}
+{"_id":{"$oid":"591ca359bf623d42740eef42"},"collection_name":"Kohmak","collection_id":"kmak","class":"sdry"}
+{"_id":{"$oid":"591ca35fbf623d42740eef43"},"collection_name":"Kraken","collection_id":"krkn","class":"sdry"}
+{"_id":{"$oid":"591ca363bf623d42740eef44"},"collection_name":"Kulstar","collection_id":"klsr","class":"sdry"}
+{"_id":{"$oid":"591ca368bf623d42740eef45"},"collection_name":"Kunai","collection_id":"knai","class":"sdry"}
+{"_id":{"$oid":"591ca370bf623d42740eef46"},"collection_name":"MK1 Kunai","collection_id":"knai-j","class":"sdry"}
+{"_id":{"$oid":"591ca374bf623d42740eef47"},"collection_name":"Lato","collection_id":"lato","class":"sdry"}
+{"_id":{"$oid":"591ca379bf623d42740eef48"},"collection_name":"Lato Prime","collection_id":"lato-p","class":"sdry"}
+{"_id":{"$oid":"591ca37fbf623d42740eef49"},"collection_name":"Lato Vandal","collection_id":"lato-v","class":"sdry"}
+{"_id":{"$oid":"591ca382bf623d42740eef4a"},"collection_name":"Lex","collection_id":"lex","class":"sdry"}
+{"_id":{"$oid":"591ca387bf623d42740eef4b"},"collection_name":"Lex Prime","collection_id":"lex-p","class":"sdry"}
+{"_id":{"$oid":"591ca38cbf623d42740eef4c"},"collection_name":"Magnus","collection_id":"mgns","class":"sdry"}
+{"_id":{"$oid":"591ca392bf623d42740eef4d"},"collection_name":"Marelok","collection_id":"mrlk","class":"sdry"}
+{"_id":{"$oid":"591ca39bbf623d42740eef4e"},"collection_name":"Vaykor Marelok","collection_id":"mrlk-s","class":"sdry"}
+{"_id":{"$oid":"591ca3c1bf623d42740eef4f"},"collection_name":"Nukor","collection_id":"nukr","class":"sdry"}
+{"_id":{"$oid":"591ca3c5bf623d42740eef50"},"collection_name":"Pandero","collection_id":"pdro","class":"sdry"}
+{"_id":{"$oid":"591ca3cabf623d42740eef51"},"collection_name":"Pox","collection_id":"pox","class":"sdry"}
+{"_id":{"$oid":"591ca3d0bf623d42740eef52"},"collection_name":"Pyrana","collection_id":"prna","class":"sdry"}
+{"_id":{"$oid":"591ca3d4bf623d42740eef53"},"collection_name":"Seer","collection_id":"seer","class":"sdry"}
+{"_id":{"$oid":"591ca3dabf623d42740eef54"},"collection_name":"Sicarus","collection_id":"scrs","class":"sdry"}
+{"_id":{"$oid":"591ca3e0bf623d42740eef55"},"collection_name":"Sicarus Prime","collection_id":"scrs-p","class":"sdry"}
+{"_id":{"$oid":"591ca3e4bf623d42740eef56"},"collection_name":"Sonicor","collection_id":"sncr","class":"sdry"}
+{"_id":{"$oid":"591ca3ebbf623d42740eef57"},"collection_name":"Spectra","collection_id":"sptr","class":"sdry"}
+{"_id":{"$oid":"591ca3f5bf623d42740eef58"},"collection_name":"Spira","collection_id":"spir","class":"sdry"}
+{"_id":{"$oid":"591ca3fbbf623d42740eef59"},"collection_name":"Spira Prime","collection_id":"spir-p","class":"sdry"}
+{"_id":{"$oid":"591ca402bf623d42740eef5a"},"collection_name":"Staticor","collection_id":"stcr","class":"sdry"}
+{"_id":{"$oid":"591ca406bf623d42740eef5b"},"collection_name":"Stug","collection_id":"stug","class":"sdry"}
+{"_id":{"$oid":"591ca40bbf623d42740eef5c"},"collection_name":"Talons","collection_id":"tlns","class":"sdry"}
+{"_id":{"$oid":"591ca410bf623d42740eef5d"},"collection_name":"Twin Grakata","collection_id":"twgk","class":"sdry"}
+{"_id":{"$oid":"591ca418bf623d42740eef5e"},"collection_name":"Twin Gremlins","collection_id":"twgl","class":"sdry"}
+{"_id":{"$oid":"591ca420bf623d42740eef5f"},"collection_name":"Twin Kohmak","collection_id":"twkm","class":"sdry"}
+{"_id":{"$oid":"591ca426bf623d42740eef60"},"collection_name":"Twin Rogga","collection_id":"twrg","class":"sdry"}
+{"_id":{"$oid":"591ca42bbf623d42740eef61"},"collection_name":"Twin Vipers","collection_id":"twvp","class":"sdry"}
+{"_id":{"$oid":"591ca433bf623d42740eef62"},"collection_name":"Twin Vipers Wraith","collection_id":"twvp-w","class":"sdry"}
+{"_id":{"$oid":"591ca438bf623d42740eef63"},"collection_name":"Tysis","collection_id":"tsis","class":"sdry"}
+{"_id":{"$oid":"591ca43dbf623d42740eef64"},"collection_name":"Vasto","collection_id":"vsto","class":"sdry"}
+{"_id":{"$oid":"591ca443bf623d42740eef65"},"collection_name":"Vasto Prime","collection_id":"vsto-p","class":"sdry"}
+{"_id":{"$oid":"591ca449bf623d42740eef66"},"collection_name":"Viper","collection_id":"vipr","class":"sdry"}
+{"_id":{"$oid":"591ca4babf623d42740eef67"},"collection_name":"Ack \u0026 Brunt","collection_id":"aabt","class":"mele"}
+{"_id":{"$oid":"591ca4bfbf623d42740eef68"},"collection_name":"Amphis","collection_id":"amhs","class":"mele"}
+{"_id":{"$oid":"591ca4c3bf623d42740eef69"},"collection_name":"Anku","collection_id":"anku","class":"mele"}
+{"_id":{"$oid":"591ca4c7bf623d42740eef6a"},"collection_name":"Ankyros","collection_id":"ayro","class":"mele"}
+{"_id":{"$oid":"591ca4cdbf623d42740eef6b"},"collection_name":"Ankyros Prime","collection_id":"ayro-p","class":"mele"}
+{"_id":{"$oid":"591ca4d4bf623d42740eef6c"},"collection_name":"Arcata","collection_id":"acta","class":"mele"}
+{"_id":{"$oid":"591ca4d8bf623d42740eef6d"},"collection_name":"Atterax","collection_id":"atrx","class":"mele"}
+{"_id":{"$oid":"591ca4dcbf623d42740eef6e"},"collection_name":"Bo","collection_id":"bo","class":"mele"}
+{"_id":{"$oid":"591ca4dfbf623d42740eef6f"},"collection_name":"Bo Prime","collection_id":"bo-p","class":"mele"}
+{"_id":{"$oid":"591ca4e5bf623d42740eef70"},"collection_name":"MK1 Bo","collection_id":"bo-j","class":"mele"}
+{"_id":{"$oid":"591ca4eabf623d42740eef71"},"collection_name":"Boltace","collection_id":"bltc","class":"mele"}
+{"_id":{"$oid":"591ca4f7bf623d42740eef72"},"collection_name":"Telos Boltace","collection_id":"bltc-s","class":"mele"}
+{"_id":{"$oid":"591ca506bf623d42740eef73"},"collection_name":"Broken Scepter","collection_id":"bscp","class":"mele"}
+{"_id":{"$oid":"591ca50cbf623d42740eef74"},"collection_name":"Broken War","collection_id":"bwar","class":"mele"}
+{"_id":{"$oid":"591ca513bf623d42740eef75"},"collection_name":"Caustacyst","collection_id":"cstc","class":"mele"}
+{"_id":{"$oid":"591ca51abf623d42740eef76"},"collection_name":"Ceramic Dagger","collection_id":"cmdg","class":"mele"}
+{"_id":{"$oid":"591ca520bf623d42740eef77"},"collection_name":"Cerata","collection_id":"crta","class":"mele"}
+{"_id":{"$oid":"591ca529bf623d42740eef78"},"collection_name":"Dakra Prime","collection_id":"dkra-p","class":"mele"}
+{"_id":{"$oid":"591ca52ebf623d42740eef79"},"collection_name":"Dark Dagger","collection_id":"ddgr","class":"mele"}
+{"_id":{"$oid":"591ca548bf623d42740eef7a"},"collection_name":"Cronus","collection_id":"cons","class":"mele"}
+{"_id":{"$oid":"591ca56ebf623d42740eef7b"},"collection_name":"Rakta Dark Dagger","collection_id":"ddgr-s","class":"mele"}
+{"_id":{"$oid":"591ca577bf623d42740eef7c"},"collection_name":"Dark Split-sword","collection_id":"dsps","class":"mele"}
+{"_id":{"$oid":"591ca57ebf623d42740eef7d"},"collection_name":"Dark Sword","collection_id":"dksd","class":"mele"}
+{"_id":{"$oid":"591ca586bf623d42740eef7e"},"collection_name":"Destreza","collection_id":"dsrz","class":"mele"}
+{"_id":{"$oid":"591ca58cbf623d42740eef7f"},"collection_name":"Dex Dakara","collection_id":"ddkr","class":"mele"}
+{"_id":{"$oid":"591ca593bf623d42740eef80"},"collection_name":"Dragon Nikana","collection_id":"dnik","class":"mele"}
+{"_id":{"$oid":"591ca59bbf623d42740eef81"},"collection_name":"Dual Cleavers","collection_id":"cvrs","class":"mele"}
+{"_id":{"$oid":"591ca5a3bf623d42740eef82"},"collection_name":"Prisma Dual Cleavers","collection_id":"cvrs-r","class":"mele"}
+{"_id":{"$oid":"591ca5a9bf623d42740eef83"},"collection_name":"Dual Ether Sword","collection_id":"desd","class":"mele"}
+{"_id":{"$oid":"591ca5b3bf623d42740eef84"},"collection_name":"Dual Heat Swords","collection_id":"dhsd","class":"mele"}
+{"_id":{"$oid":"591ca5b9bf623d42740eef85"},"collection_name":"Dual Ichor","collection_id":"dicr","class":"mele"}
+{"_id":{"$oid":"591ca5bfbf623d42740eef86"},"collection_name":"Dual Kamas","collection_id":"dkms","class":"mele"}
+{"_id":{"$oid":"591ca5c9bf623d42740eef87"},"collection_name":"Dual Kamas Prime","collection_id":"dkms-p","class":"mele"}
+{"_id":{"$oid":"591ca5d2bf623d42740eef88"},"collection_name":"Dual Raza","collection_id":"drza","class":"mele"}
+{"_id":{"$oid":"591ca5d6bf623d42740eef89"},"collection_name":"Dual Skana","collection_id":"dskn","class":"mele"}
+{"_id":{"$oid":"591ca5dcbf623d42740eef8a"},"collection_name":"Dual Zoren","collection_id":"dzrn","class":"mele"}
+{"_id":{"$oid":"591ca5e2bf623d42740eef8b"},"collection_name":"Ether Daggers","collection_id":"edgr","class":"mele"}
+{"_id":{"$oid":"591ca5ebbf623d42740eef8c"},"collection_name":"Ether Reaper","collection_id":"erpr","class":"mele"}
+{"_id":{"$oid":"591ca5f0bf623d42740eef8d"},"collection_name":"Ether Sword","collection_id":"eswd","class":"mele"}
+{"_id":{"$oid":"591ca5fabf623d42740eef8e"},"collection_name":"Fang","collection_id":"fang","class":"mele"}
+{"_id":{"$oid":"591ca5ffbf623d42740eef8f"},"collection_name":"Fang Prime","collection_id":"fang-p","class":"mele"}
+{"_id":{"$oid":"591ca609bf623d42740eef90"},"collection_name":"Fragor","collection_id":"frgr","class":"mele"}
+{"_id":{"$oid":"591ca610bf623d42740eef91"},"collection_name":"Fragor Prime","collection_id":"frgr-p","class":"mele"}
+{"_id":{"$oid":"591ca615bf623d42740eef92"},"collection_name":"Furax","collection_id":"frax","class":"mele"}
+{"_id":{"$oid":"591ca61cbf623d42740eef93"},"collection_name":"Furax Wraith","collection_id":"frax-w","class":"mele"}
+{"_id":{"$oid":"591ca623bf623d42740eef94"},"collection_name":"MK1 Furax","collection_id":"frax-j","class":"mele"}
+{"_id":{"$oid":"591ca627bf623d42740eef95"},"collection_name":"Galatine","collection_id":"glne","class":"mele"}
+{"_id":{"$oid":"591ca62dbf623d42740eef96"},"collection_name":"Galatine Prime","collection_id":"glne-p","class":"mele"}
+{"_id":{"$oid":"591ca632bf623d42740eef97"},"collection_name":"Gazal Machete","collection_id":"gzmt","class":"mele"}
+{"_id":{"$oid":"591ca635bf623d42740eef98"},"collection_name":"Glaive","collection_id":"glve","class":"mele"}
+{"_id":{"$oid":"591ca639bf623d42740eef99"},"collection_name":"Gram","collection_id":"gram","class":"mele"}
+{"_id":{"$oid":"591ca63fbf623d42740eef9a"},"collection_name":"Halikar","collection_id":"hlkr","class":"mele"}
+{"_id":{"$oid":"591ca642bf623d42740eef9b"},"collection_name":"Hate","collection_id":"hate","class":"mele"}
+{"_id":{"$oid":"591ca647bf623d42740eef9c"},"collection_name":"Heat Dagger","collection_id":"hdgr","class":"mele"}
+{"_id":{"$oid":"591ca650bf623d42740eef9d"},"collection_name":"Heat Sword","collection_id":"hswd","class":"mele"}
+{"_id":{"$oid":"591ca657bf623d42740eef9e"},"collection_name":"Heliocor","collection_id":"hlcr","class":"mele"}
+{"_id":{"$oid":"591ca65dbf623d42740eef9f"},"collection_name":"Synoid Heliocor","collection_id":"hlcr-s","class":"mele"}
+{"_id":{"$oid":"591ca663bf623d42740eefa0"},"collection_name":"Hirudo","collection_id":"hrdo","class":"mele"}
+{"_id":{"$oid":"591ca66abf623d42740eefa1"},"collection_name":"Jat Kittag","collection_id":"jtkg","class":"mele"}
+{"_id":{"$oid":"591ca670bf623d42740eefa2"},"collection_name":"Jaw Sword","collection_id":"jswd","class":"mele"}
+{"_id":{"$oid":"591ca675bf623d42740eefa3"},"collection_name":"Kama","collection_id":"kama","class":"mele"}
+{"_id":{"$oid":"591ca680bf623d42740eefa4"},"collection_name":"Karyst","collection_id":"krys","class":"mele"}
+{"_id":{"$oid":"591ca688bf623d42740eefa5"},"collection_name":"Kesheg","collection_id":"kshg","class":"mele"}
+{"_id":{"$oid":"591ca68dbf623d42740eefa6"},"collection_name":"Kestrel","collection_id":"ksrl","class":"mele"}
+{"_id":{"$oid":"591ca694bf623d42740eefa7"},"collection_name":"Kogake","collection_id":"kgke","class":"mele"}
+{"_id":{"$oid":"591ca698bf623d42740eefa8"},"collection_name":"Kronen","collection_id":"krne","class":"mele"}
+{"_id":{"$oid":"591ca69cbf623d42740eefa9"},"collection_name":"Lacera","collection_id":"lcra","class":"mele"}
+{"_id":{"$oid":"591ca6a1bf623d42740eefaa"},"collection_name":"Lecta","collection_id":"lcta","class":"mele"}
+{"_id":{"$oid":"591ca6a9bf623d42740eefab"},"collection_name":"Secura Lecta","collection_id":"lcta-s","class":"mele"}
+{"_id":{"$oid":"591ca6b0bf623d42740eefac"},"collection_name":"Lesion","collection_id":"lsin","class":"mele"}
+{"_id":{"$oid":"591ca6b5bf623d42740eefad"},"collection_name":"Machete","collection_id":"mcht","class":"mele"}
+{"_id":{"$oid":"591ca6bbbf623d42740eefae"},"collection_name":"Machete Wraith","collection_id":"mcht-w","class":"mele"}
+{"_id":{"$oid":"591ca6c1bf623d42740eefaf"},"collection_name":"Magistar","collection_id":"mgtr","class":"mele"}
+{"_id":{"$oid":"591ca6cbbf623d42740eefb0"},"collection_name":"Sancti Magistar","collection_id":"mgtr-s","class":"mele"}
+{"_id":{"$oid":"591ca6cfbf623d42740eefb1"},"collection_name":"Mios","collection_id":"mios","class":"mele"}
+{"_id":{"$oid":"591ca6d2bf623d42740eefb2"},"collection_name":"Mire","collection_id":"mire","class":"mele"}
+{"_id":{"$oid":"591ca6dabf623d42740eefb3"},"collection_name":"Nami Skyla","collection_id":"nmsy","class":"mele"}
+{"_id":{"$oid":"591ca6debf623d42740eefb4"},"collection_name":"Nami Solo","collection_id":"nmsl","class":"mele"}
+{"_id":{"$oid":"591ca6e2bf623d42740eefb5"},"collection_name":"Nikana","collection_id":"nkna","class":"mele"}
+{"_id":{"$oid":"591ca6e9bf623d42740eefb6"},"collection_name":"Nikana Prime","collection_id":"nkna-p","class":"mele"}
+{"_id":{"$oid":"591ca6f5bf623d42740eefb7"},"collection_name":"Ninkondi","collection_id":"nknd","class":"mele"}
+{"_id":{"$oid":"591ca6fabf623d42740eefb8"},"collection_name":"Obex","collection_id":"obex","class":"mele"}
+{"_id":{"$oid":"591ca700bf623d42740eefb9"},"collection_name":"Prisma Obex","collection_id":"obex-r","class":"mele"}
+{"_id":{"$oid":"591ca702bf623d42740eefba"},"collection_name":"Ohma","collection_id":"ohma","class":"mele"}
+{"_id":{"$oid":"591ca705bf623d42740eefbb"},"collection_name":"Okina","collection_id":"okna","class":"mele"}
+{"_id":{"$oid":"591ca70cbf623d42740eefbc"},"collection_name":"Orthos","collection_id":"orts","class":"mele"}
+{"_id":{"$oid":"591ca710bf623d42740eefbd"},"collection_name":"Orthos Prime","collection_id":"orts-p","class":"mele"}
+{"_id":{"$oid":"591ca714bf623d42740eefbe"},"collection_name":"Orvius","collection_id":"orvs","class":"mele"}
+{"_id":{"$oid":"591ca71bbf623d42740eefbf"},"collection_name":"Pangolin Sword","collection_id":"gswd","class":"mele"}
+{"_id":{"$oid":"591ca721bf623d42740eefc0"},"collection_name":"Plasma Sword","collection_id":"pswd","class":"mele"}
+{"_id":{"$oid":"591ca728bf623d42740eefc1"},"collection_name":"Prova","collection_id":"prva","class":"mele"}
+{"_id":{"$oid":"591ca72dbf623d42740eefc2"},"collection_name":"Prova Vandal","collection_id":"prva-v","class":"mele"}
+{"_id":{"$oid":"591ca737bf623d42740eefc3"},"collection_name":"Reaper Prime","collection_id":"repr-p","class":"mele"}
+{"_id":{"$oid":"591ca73ebf623d42740eefc4"},"collection_name":"Redeemer","collection_id":"rdmr","class":"mele"}
+{"_id":{"$oid":"591ca74abf623d42740eefc5"},"collection_name":"Ripkas","collection_id":"rpks","class":"mele"}
+{"_id":{"$oid":"591ca74fbf623d42740eefc6"},"collection_name":"Sarpa","collection_id":"srpa","class":"mele"}
+{"_id":{"$oid":"591ca755bf623d42740eefc7"},"collection_name":"Scindo","collection_id":"scnd","class":"mele"}
+{"_id":{"$oid":"591ca75abf623d42740eefc8"},"collection_name":"Scindo Prime","collection_id":"scnd-p","class":"mele"}
+{"_id":{"$oid":"591ca760bf623d42740eefc9"},"collection_name":"Scoliac","collection_id":"sclc","class":"mele"}
+{"_id":{"$oid":"591ca764bf623d42740eefca"},"collection_name":"Serro","collection_id":"srro","class":"mele"}
+{"_id":{"$oid":"591ca76ebf623d42740eefcb"},"collection_name":"Shaku","collection_id":"shku","class":"mele"}
+{"_id":{"$oid":"591ca773bf623d42740eefcc"},"collection_name":"Sheev","collection_id":"shev","class":"mele"}
+{"_id":{"$oid":"591ca778bf623d42740eefcd"},"collection_name":"Sibear","collection_id":"sber","class":"mele"}
+{"_id":{"$oid":"591ca780bf623d42740eefce"},"collection_name":"Silva \u0026 Aegis","collection_id":"saag","class":"mele"}
+{"_id":{"$oid":"591ca789bf623d42740eefcf"},"collection_name":"Skana","collection_id":"skna","class":"mele"}
+{"_id":{"$oid":"591ca78ebf623d42740eefd0"},"collection_name":"Skana Prime","collection_id":"skna-p","class":"mele"}
+{"_id":{"$oid":"591ca796bf623d42740eefd1"},"collection_name":"Prisma Skana","collection_id":"skna-r","class":"mele"}
+{"_id":{"$oid":"591ca799bf623d42740eefd2"},"collection_name":"Sydon","collection_id":"sydn","class":"mele"}
+{"_id":{"$oid":"591ca7a1bf623d42740eefd3"},"collection_name":"Vaykor Sydon","collection_id":"sydn-s","class":"mele"}
+{"_id":{"$oid":"591ca7a7bf623d42740eefd4"},"collection_name":"Tekko","collection_id":"tkko","class":"mele"}
+{"_id":{"$oid":"591ca7acbf623d42740eefd5"},"collection_name":"Tipedo","collection_id":"tpdo","class":"mele"}
+{"_id":{"$oid":"591ca7b0bf623d42740eefd6"},"collection_name":"Tonbo","collection_id":"tnbo","class":"mele"}
+{"_id":{"$oid":"591ca7b6bf623d42740eefd7"},"collection_name":"Twin Basolk","collection_id":"twbs","class":"mele"}
+{"_id":{"$oid":"591ca7bcbf623d42740eefd8"},"collection_name":"Venka","collection_id":"vnka","class":"mele"}
+{"_id":{"$oid":"591ca7c1bf623d42740eefd9"},"collection_name":"Venka Prime","collection_id":"vnka-p","class":"mele"}
+{"_id":{"$oid":"591ca7c4bf623d42740eefda"},"collection_name":"War","collection_id":"war","class":"mele"}
+{"_id":{"$oid":"591ca7cbbf623d42740eefdb"},"collection_name":"Zenistar","collection_id":"znsr","class":"mele"}
