@@ -210,24 +210,18 @@ app.get('/add/Recipe', (request, response) => {
 				 //dj-nrgL  (dojo, energy lab)
 				 
 				 //Needs Credit Cost, too
-				response.render('detail_view', {
-					collection_name: collection_name,
-					partsList: shoppingList,
-					credit_cost: totalCredits
-				});
+				
 				});
 			});
 		});
 	});
+	response.render('detail_view', {
+					collection_name: collection_name,
+					partsList: shoppingList,
+					credit_cost: totalCredits
+				});
  });
 
-
-//localhost:3000
-/*
-Mastery: starts at 2500 + 5k per rank
-Bringing up the ranks of Weapons, Sentinel weapons and Archwing weapons earn 100 mastery points for each rank gained up to Rank 30 for a total of 3,000.
-Bringing up the ranks of Warframes, Companions and Archwings earn 200 mastery points for each rank gained up to Rank 30 for a total of 6,000.
-*/
  app.get('/', (request, response) => {
 	 var acollection = _db.collection('Collection');
 	 var collectionObj = {

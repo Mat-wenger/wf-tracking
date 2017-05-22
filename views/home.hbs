@@ -2,15 +2,30 @@
 There are currently: {{this.numberOfCollectibles}} sources of mastery. <br/>
 Total Available master: {{totalEquipmentMastery}}pts.
  <h1>Warframes<h2>{{this.warframe_count}}</h2></h1>
- <div class="flexcontainer">
+ <div class="flexcontainer warframes">
  {{#each warframes}}
 	<a href = "/view/Collectible/{{this.collection_id}}" name ="{{this.collection_name}}" >{{this.collection_name}}</a>
  {{/each}}
  <div class="prime-separator">primes</div>
+ <div class="normal-separator">Normal Weapons</div>
  </div>
  <h1>Warframe weapons: Primary<h2>{{this.primary_count}}</h2></h1>
- <div class="flexcontainer">
+ <div class="flexcontainer primaries">
  {{#each primaries}}
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
+	<br/>
+ {{/each}}
+ <div class="normal-separator">Normal Weapons</div>
+ <div class="prime-separator">primes</div>
+ <div class="prisma-separator">prisma</div>
+ <div class="vandal-separator">vandal</div>
+ <div class="wraith-separator">wraith</div>
+ <div class="mara-separator">mara</div>
+ </div>
+ 
+ <h1>Warframe weapons: Secondary<h2>{{this.secondary_count}}</h2></h1>
+ <div class="flexcontainer">
+ {{#each secondaries}}
 	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
@@ -20,13 +35,6 @@ Total Available master: {{totalEquipmentMastery}}pts.
  <div class="wraith-separator">wraith</div>
  <div class="mara-separator">mara</div>
  </div>
- 
- <h1>Warframe weapons: Secondary<h2>{{this.secondary_count}}</h2></h1>
- {{#each secondaries}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
-	<br/>
- {{/each}}
- 
  <h1>Warframe weapons: Melee<h2>{{this.melee_count}}</h2></h1>
  {{#each melee}}
 	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
