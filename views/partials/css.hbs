@@ -1,3 +1,6 @@
+/*
+ * TODO: - displaying normal equipment breaks styling. Probably related to the JS, not the CSS
+ */
  html{
  font-size:20px;
  }
@@ -16,49 +19,47 @@
  box-sizing:border-box;
  border:thin dotted gray;
  transition-duration:.25s;
+ height:1.5em;
+ }
+ .flexcontainer [class*="separator"]{
+ height:1.5em;
+ width:25%;
+ box-sizing:border-box;
  }
  .flexcontainer [name*="Prime"]{
- order:4;
- border:thin solid gold;
- visibility:collapse;
+ order:3;
  }
  .flexcontainer [name*="Vandal"]{
- order:6;
- visibility:collapse;
+ order:4;
  }
  .flexcontainer [name*="Prisma"]{
- order:8;
- visibility:collapse;
+ order:5;
  }
  .flexcontainer [name*="Wraith"]{
- order:10;
- visibility:collapse;
+ order:6;
  }
  .flexcontainer [name*="Mara"]{
- order:12;
- visibility:collapse;
+ order:7;
  }
- [class*="separator"]{
- text-align:center;
- box-sizing:border-box;
- width:25%;
+ .flexcontainer [name*="Umbra"]{
+ order:8;
  }
- .normal-separator{
+ .flexcontainer .normal-separator{
  visibility:collapse;
  order:1;
  border:none;
  width:0;
  }
 .prime-separator{
- order:3;
+ order:9;
  border: thin solid gold;
 }
  .vandal-separator{
- order:5;
+ order:9;
  border: thin solid blue;
 }
  .prisma-separator{
- order:7;
+ order:9;
  border: thin solid green;
 }
  .wraith-separator{
@@ -66,6 +67,6 @@
  border: thin solid black;
 }
  .mara-separator{
- order:11;
+ order:9;
  border: thin solid red;
 }

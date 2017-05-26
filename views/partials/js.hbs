@@ -11,24 +11,30 @@ for(var i = 0; i < interactionElements.length; i++){
 	console.log('.'+ parent + ' [name]:not([name*="' + showElements + '"])');
 	for(var e = 0; e < elementsToChange.length; e++){
 	  elementsToChange[e].style.width = "0";
-	  elementsToChange[e].style.border="none";
+	  elementsToChange[e].style.border = "none";
 	  elementsToChange[e].style.visibility = "collapse";
+	  this.style.order = "9";
 	}
 	
 	elementsToChange2 = document.querySelectorAll('.' + parent + ' [name*="' + showElements + '"]');
 	for(var e = 0; e < elementsToChange2.length; e++){
 	  elementsToChange2[e].style.width = "25%";
-	  elementsToChange2[e].style.border="thin dotted gray";
+	  elementsToChange2[e].style.border = "";
 	  elementsToChange2[e].style.visibility = "visible";
+	  elementsToChange2[e].style.order = "2";
 	}
 	
 	buttonsToChange = document.querySelectorAll('.' + parent + ' [class*="separator"]:not([class="' + showElements.toLowerCase() +'-separator"])');
 	for(var b = 0; b < buttonsToChange.length; b++){
 		buttonsToChange[b].style.visibility = "visible";
 		buttonsToChange[b].style.width = "25%";
+		buttonsToChange[b].style.order = "3";
+		buttonsToChange[b].style.border = "";
 	}
 	this.style.visibility = "collapse";
 	this.style.width = "0";
+	this.style.order = "9";
+	this.style.border = "none"
   });
 }
 
@@ -40,20 +46,24 @@ for(var i = 0; i < interactionElements2.length; i++){
 	for(var e = 0; e < elementsToChange.length; e++){
 		elementsToChange[e].style.visibility = "collapse";
 		elementsToChange[e].style.width = "0";	
+		this.style.order = "9";
 	}
 	var elementsToChange2 = document.querySelectorAll('.' + parent + ' [name]:not([name*="Prime"]):not([name*="Wraith"]):not([name*="Prisma"]):not([name*="Mara"]):not([name*="Vandal"])');
 	for(var e = 0; e < elementsToChange2.length; e++){
 	elementsToChange2[e].style.visibility = "visible";
 	elementsToChange2[e].style.width = "25%";
+	elementsToChange2[e].style.order = "2";
 	}
   
   buttonsToChange = document.querySelectorAll('.' + parent + ' [class*="separator"]:not(.normal-separator)');
 	for(var b = 0; b < buttonsToChange.length; b++){
 		buttonsToChange[b].style.visibility = "visible";
 		buttonsToChange[b].style.width = "25%";
+		buttonsToChange[b].style.order = "3";
 	}
 	this.style.visibility = "collapse";
 	this.style.width = "0";
+	this.style.order = "9";
   });
   
 }
