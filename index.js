@@ -5,6 +5,7 @@
  const exphbs = require('express-handlebars')
  const app = express()
  const port = 3000
+ var promise = require('Promise')
  
  var MongoClient = require('mongodb').MongoClient;
  var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test'}
@@ -126,6 +127,135 @@ app.get('/add/Recipe', (request, response) => {
 	 });
  });
  
+ app.get('/new_view/Collectible/:id', (request, response) => {
+	var collectibles = _db.collection('Collection');
+	var collectible_stream = collectibles.find({'collection_id' : request.params.id});
+	var recipes = _db.collection('recipe');
+	var _collectible = {};
+	
+	var simpleComponents = [];
+	var simpleComponentsObj = {};
+	
+	var thisRecipe = {};
+	var creditCost = 0;
+	var shoppingList = {};
+	var complexComponents = [], complexSubComponents = [];
+	
+	
+	var _renderPage = function(){
+	 response.render('detail_view', {
+						collection_name: _collectible.collection_name,
+					//	partsList: shoppingList,
+					//	credit_cost: totalCredits
+					});
+	 };
+	 
+	 var _addToShoppingList = function (id, qty, recipe, type){
+		 if(qty == undefined){
+			 qty = 0;
+		 }
+		 if(id !== ""){
+			 if(shoppingList[id] == undefined){
+				 shoppingList[id] = {
+					 'quantity' : qty,
+					 'recipe': recipe || {},
+					 'type' :  (type || 'simple component')
+				 };
+			 }
+			 else {
+				 shoppingList[id] = {
+					 'quantity' : parseInt(shoppingList[id]['quantity']) + parseInt(qty),
+					 'recipe': recipe || {},
+					 'type' : type
+				 }
+			 }
+		 }
+	 }
+	
+	sComponentStream = recipes.find({'component_1_id':''});
+	sComponentStream.on('data', function(sComponent){
+		simpleComponents.push(sComponent.component_name);
+		simpleComponentsObj[sComponent.component_id] = sComponent.component_name;
+	});
+	sComponentStream.on('end', function(){
+		tLevelRecipeStream = recipes.find({'collection_id':request.params.id});
+		tLevelRecipeStream.on('data', function(recipe){
+			creditCost += parseInt(recipe.credit_cost);
+			thisRecipe = recipe;
+		});
+		tLevelRecipeStream.on('end', function(){
+			_addToShoppingList(thisRecipe['component_id'], thisRecipe['component_qty'], {
+						'component_1_id': thisRecipe['component_1_id'],
+						'component_1_qty':thisRecipe['component_1_qty'],
+						'component_2_id': thisRecipe['component_2_id'],
+						'component_2_qty':thisRecipe['component_2_qty'],
+						'component_3_id': thisRecipe['component_3_id'],
+						'component_3_qty':thisRecipe['component_3_qty'],
+						'component_4_id': thisRecipe['component_4_id'],
+						'component_4_qty':thisRecipe['component_4_qty'],
+						}, 'top level component');
+			for(var i = 1; i<=4;i++){
+				if(simpleComponentsObj[thisRecipe['component_'+i+'_id']] == undefined && 
+				   thisRecipe['component_'+i+'_id'] !== ""){
+					complexComponents.push(thisRecipe['component_'+i+'_id']);
+				}
+				if(thisRecipe['component_'+i+'_id'] !== "")
+					_addToShoppingList(thisRecipe['component_'+i+'_id'], thisRecipe['component_'+i+'_qty']);
+			}
+			console.log('OOOO', complexComponents);
+			cComponentStream = recipes.find({'component_id':{$in: complexComponents}});
+			cComponentStream.on('data', function(complexComponent){
+			//	console.log(complexComponent['component_id']);
+				_addToShoppingList(complexComponent['component_id'], complexComponent['component_qty'], {
+						'component_1_id': complexComponent['component_1_id'],
+						'component_1_qty':complexComponent['component_1_qty'],
+						'component_2_id': complexComponent['component_2_id'],
+						'component_2_qty':complexComponent['component_2_qty'],
+						'component_3_id': complexComponent['component_3_id'],
+						'component_3_qty':complexComponent['component_3_qty'],
+						'component_4_id': complexComponent['component_4_id'],
+						'component_4_qty':complexComponent['component_4_qty'],
+						}, 'complex component');
+				for(var j = 1; j<=4; j++){
+					if(simpleComponentsObj[complexComponent['component_'+j+'_id']] == undefined){
+						complexSubComponents.push(complexComponent['component_'+j+'_id']);
+						/**/
+					}
+					//_addToShoppingList(complexComponent['component_'+j+'_id'],complexComponent['component_'+j+'_qty']);
+				}
+				simpleComponentsObj[complexComponent['component_id']] = complexComponent.component_name;
+				
+			});
+			cComponentStream.on('end', function(){
+				cSComponentStream = recipes.find({'component_id':{$in: complexSubComponents}, 'collection_id':""});
+				cSComponentStream.on('data', function(CSRecipe){
+				_addToShoppingList(CSRecipe['component_id'], CSRecipe['component_qty'], {
+						'component_1_id': CSRecipe['component_1_id'],
+						'component_1_qty':CSRecipe['component_1_qty'],
+						'component_2_id': CSRecipe['component_2_id'],
+						'component_2_qty':CSRecipe['component_2_qty'],
+						'component_3_id': CSRecipe['component_3_id'],
+						'component_3_qty':CSRecipe['component_3_qty'],
+						'component_4_id': CSRecipe['component_4_id'],
+						'component_4_qty':CSRecipe['component_4_qty'],
+						}, 'complex subcomponent');
+		
+		});
+				cSComponentStream.on('end', function(){
+					console.log(shoppingList);
+					
+					var slKeys = Object.keys(shoppingList);
+					for(var sl = 0; sl < slKeys.length; sl++){
+						//console.log(slKeys[sl], "--->", shoppingList[slKeys[sl]])
+					}
+					_renderPage();			
+				});
+			});
+		});
+	});
+});
+	
+	
  app.get('/view/Collectible/:id', (request, response) => {
 	var coll_id = request.params.id;
 
@@ -279,13 +409,6 @@ app.get('/add/Recipe', (request, response) => {
 		
 	});
 	
-	//no more frames:
-	
-	/*
-		Bringing up the ranks of Weapons, Sentinel weapons and Archwing weapons earn 100 mastery points for each rank gained up to Rank 30 for a total of 3,000.
-		Bringing up the ranks of Warframes, Companions and Archwings earn 200 mastery points for each rank gained up to Rank 30 for a total of 6,000.
-	*/
-	
 	frame_stream.on("end", function(){
 		totalEquipmentMastery = ((collectionObj['frames'].length + collectionObj['companions'].length + collectionObj['sentinels'].length +  collectionObj['wings'].length) * 6000);
 		totalEquipmentMastery = ((collectionObj['primaries'].length + collectionObj['secondaries'].length + collectionObj['melees'].length +  collectionObj['sentinel_weapons'].length + collectionObj['wing_primary'].length + collectionObj['wing_melee'].length) * 3000);
@@ -331,7 +454,7 @@ app.get('/add/Recipe', (request, response) => {
  
  app.listen(port, (err) => {
  if (err) {
- return console.log('something bad happened', err)
+ return console.log('404. You messed up, nub.', err)
  }
  console.log(`server is listening on ${port}`)
  })
