@@ -4,19 +4,25 @@
  const exphbs = require('express-handlebars')
  const app = express()
  const port = 3000
- var promise = require('Promise')
  
  var MongoClient = require('mongodb').MongoClient;
  if(process.env.production == undefined || process.env.production.indexOf('prod:true') == -1){
-	var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test'}
+	var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test', 'host' : 'localhost', 'user':'', 'pass':''};
  }
  else {
-	 //heroku server stuff.
+	 var MongoConnection = {'protocol': 'mongodb', 
+							'port':process.env.PROD_PT, 
+							'db' :process.env.PROD_DB,
+							'user': process.env.PROD_UN + ':',
+							'pass': process.env.PROD_PW,
+							'host': process.env.PROD_HT,
+							}
  }
  var _db = {};
 
 // Connect to the db
- MongoClient.connect(MongoConnection.protocol + '://' + 'localhost:' + MongoConnection.port + '/' + MongoConnection.db, function(err, db) {
+//protocol://dbuser:dbpass@host:port/dbname
+ MongoClient.connect(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db, function(err, db) {
   if(!err) {
     console.log("We are connected");
 	_db = db;
