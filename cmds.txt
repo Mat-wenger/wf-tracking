@@ -1,7 +1,7 @@
 mongo cli
-mongo ds157621.mlab.com:57621/heroku_cmd1h8gr -u <dbuser> -p <dbpassword>
+"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe" ds157621.mlab.com:57621/heroku_cmd1h8gr -u <dbuser> -p <dbpassword>
 
-"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe"
+"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe" 
 |-> db.createCollection(name, options) //forgot this step
 
 start node
@@ -14,3 +14,7 @@ export mongodb as json
 "C:\Program Files\MongoDB\Server\3.4\bin\mongoexport.exe" -dbpath "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db" --db test --collection Collection --out "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db\collection.json"
 
 "C:\Program Files\MongoDB\Server\3.4\bin\mongoexport.exe" --db test --collection Collection --out "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db\collection.json"
+
+import to live:
+"C:\Program Files\MongoDB\Server\3.4\bin\mongoimport.exe" -h ds157621.mlab.com:57621 -u heroku_cmd1h8gr -p 6ce231bnccagsf6mhjlpns2hmn -d heroku_cmd1h8gr -c Collection --file collection2.json
+"C:\Program Files\MongoDB\Server\3.4\bin\mongoimport.exe" -h ds157621.mlab.com:57621 -u heroku_cmd1h8gr -p 6ce231bnccagsf6mhjlpns2hmn -d heroku_cmd1h8gr -c recipe --file recipe2.json
