@@ -3,7 +3,7 @@
  const express = require('express')
  const exphbs = require('express-handlebars')
  const app = express()
- const port = 3000
+ const port = 3000;
  
  var MongoClient = require('mongodb').MongoClient;
  if(process.env.production == undefined || process.env.production.indexOf('prod:true') == -1){
@@ -20,6 +20,8 @@
  }
  var _db = {};
 
+ console.log(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db);
+ return false;
 // Connect to the db
 //protocol://dbuser:dbpass@host:port/dbname
  MongoClient.connect(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db, function(err, db) {
