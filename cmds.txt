@@ -3,7 +3,7 @@ mongo cli
 |-> db.createCollection(name, options) //forgot this step
 
 start node
-node "C:\Users\mwenger\Desktop\node playing around\proj-wf\index.js"
+node "C:\Users\mwenger\Desktop\node playing around\proj-wf\index.js" {test vars here}
 
 start mongodb
 "C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" -dbpath "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db"

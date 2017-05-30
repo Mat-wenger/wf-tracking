@@ -1,5 +1,4 @@
  // index.js
- 
  const path = require('path')
  const express = require('express')
  const exphbs = require('express-handlebars')
@@ -8,8 +7,12 @@
  var promise = require('Promise')
  
  var MongoClient = require('mongodb').MongoClient;
- var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test'}
-
+ if(process.env.production == undefined || process.env.production.indexOf('prod:true') == -1){
+	var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test'}
+ }
+ else {
+	 //heroku server stuff.
+ }
  var _db = {};
 
 // Connect to the db
