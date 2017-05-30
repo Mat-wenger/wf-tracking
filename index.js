@@ -12,14 +12,11 @@
 							'port':process.env.PROD_PT, 
 							'db' :process.env.PROD_DB,
 							'user': process.env.PROD_UN + ':',
-							'pass': process.env.PROD_PW,
+							'pass': process.env.PROD_PW + '@',
 							'host': process.env.PROD_HT,
 							}
  }
  var _db = {};
-
-// Connect to the db
-//protocol://dbuser:dbpass@host:port/dbname
  MongoClient.connect(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db, function(err, db) {
   if(!err) {
     console.log("We are connected");
