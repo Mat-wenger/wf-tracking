@@ -4,6 +4,7 @@
  const exphbs = require('express-handlebars')
  const app = express()
  const port = process.env.port || 3000;
+ console.log(port);
  
  var MongoClient = require('mongodb').MongoClient;
  var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test', 'host' : 'localhost', 'user':'', 'pass':''};
