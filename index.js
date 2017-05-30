@@ -17,7 +17,6 @@
 							}
  }
  var _db = {};
- console.log(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db);
  MongoClient.connect(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db, function(err, db) {
   if(!err) {
     console.log("We are connected");
@@ -457,7 +456,7 @@ app.get('/add/Recipe', (request, response) => {
 		  totalEquipmentMastery: totalEquipmentMastery
 		});			
 		});
-		
+		process.exit();
 	});
 
  
@@ -473,3 +472,4 @@ app.get('/add/Recipe', (request, response) => {
  }
  console.log(`server is listening on ${port}`)
  })
+ 
