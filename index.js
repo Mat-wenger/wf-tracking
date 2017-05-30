@@ -23,17 +23,70 @@
 	  return;
   }
  });
+ var hbs = exphbs.create({
+	 helpers:{
+		 'objToJS' : function(variable, objName){
+			 objKeys = Object.keys(variable);
+			 var returnString = 'var ' + objName + ' = { '
+			 for(var ok = 0; ok < objKeys.length; ok++){
+				 returnString += "'" + objKeys[ok] + "':";
+				 if(typeof variable[objKeys[ok]] == 'object'){
+					 returnString += '{';
+					 subKeys = Object.keys(variable[objKeys[ok]]);
+					 for(var sk = 0; sk < subKeys.length; sk++){
+						 if(typeof variable[objKeys[ok]][subKeys[sk]] == 'object')
+							 returnString += "'" + [subKeys[sk]] + "':'" + variable[objKeys[ok]][subKeys[sk]]['recipe_id'] + "'";
+						 else
+							returnString += "'" + subKeys[sk] + "':" + variable[objKeys[ok]][subKeys[sk]] + ',';
+					 }
+					 returnString += '},';
+				 }
+				 else returnString += variable[objKeys[ok]];
+			 }
+			 returnString += '};'
+			return returnString;
+		 },
+		 'recipify' : function(key, variable, lookup, sublookup){
+						  if(typeof variable == 'object' && variable.replacement_id !== undefined){
+							  var recipeObj = lookup[variable.replacement_id];
+							  var recipeObjKeys = Object.keys(recipeObj);
+							  var returnString = "<div class = 'entry-header' hasChild = 'true' style = 'margin:8px;'>" + "<span style = 'color:blue'>" + variable.qty + ' x ' + key + "</span><br/><div class='entry-body' style = 'margin-left:8px;'>";
+							  
+							  for(roKeys = 0; roKeys < recipeObjKeys.length; roKeys++){
+								  if(typeof recipeObj[recipeObjKeys[roKeys]] !== 'object')
+									returnString += recipeObj[recipeObjKeys[roKeys]] + ' x ' + recipeObjKeys[roKeys] + '<br/>';
+								  else {
+									  returnString +=  "<span style = 'color:red;'>" + recipeObj[recipeObjKeys[roKeys]].qty + ' x ' + recipeObjKeys[roKeys] + '</span>';
+									  subrecipeObj = sublookup[recipeObj[recipeObjKeys[roKeys]].recipe_id];
+									  subrecipeKeys = Object.keys(subrecipeObj);
+									  returnString += "<div style = 'margin-left:8px;' class='subentry' hasChild = 'true'>";
+									  for(sroKeys = 0; sroKeys < subrecipeKeys.length; sroKeys++){
+										  returnString += subrecipeObj[subrecipeKeys[sroKeys]] + ' x ' + subrecipeKeys[sroKeys] + '<br/>';
+									  }
+									  returnString += "</div>";
+								  }
+							  }
+							  returnString += "</div></div>";
+						  }
+						  else {
+							  returnString = "<div class = 'entry' style = 'margin-left:8px;'>" + variable.qty + ' x ' + key + "</div>";
+						  }
+					      return returnString;
+					   }
+	 },
+	 
+	 defaultLayout: 'main',
+	 extname: '.hbs',
+	 layoutsDir: path.join(__dirname, 'views/layouts'),
+	 partialsDir: path.join(__dirname, 'views/partials')
+ }
+ );
  
- app.engine('.hbs', exphbs({
- defaultLayout: 'main',
- extname: '.hbs',
- layoutsDir: path.join(__dirname, 'views/layouts'),
- partialsDir: path.join(__dirname, 'views/partials'),
- }));
- 
-
- app.set('view engine', '.hbs')
+ app.engine('.hbs', hbs.engine);
+ app.set('view engine', 'hbs')
  app.set('views', path.join(__dirname, 'views')) 
+ 
+ 
 
 app.get('/add/Recipe', (request, response) => {
 	var error = "";
@@ -127,7 +180,7 @@ app.get('/add/Recipe', (request, response) => {
 	 });
  });
  
- app.get('/new_view/Collectible/:id', (request, response) => {
+ app.get('/view/Collectible/:id/:ajax?', (request, response) => {
 	var collectibles = _db.collection('Collection');
 	var collectible_stream = collectibles.find({'collection_id' : request.params.id});
 	var recipes = _db.collection('recipe');
@@ -141,16 +194,39 @@ app.get('/add/Recipe', (request, response) => {
 	var shoppingList = {};
 	var complexComponents = [], complexSubComponents = [];
 	
-	
-	var _renderPage = function(){
+	//response.json - needs research but seems pretty useful.
+	var _renderPage = function(name, recipe, subrecipe, subsubrecipe){
 	 response.render('detail_view', {
-						collection_name: _collectible.collection_name,
-					//	partsList: shoppingList,
-					//	credit_cost: totalCredits
+		 layout:(typeof request.params.ajax === 'undefined'? '' : 'main'),
+						collection_name: name,
+						recipe: recipe,
+						subrecipe: subrecipe,
+						subsubrecipe: subsubrecipe
 					});
 	 };
 	 
-	 var _addToShoppingList = function (id, qty, recipe, type){
+	 var _readify = function(recipe, recipeParent){
+		 readableRecipe = {};
+		 for(var i = 1; i <= 4; i++){
+			 
+			 var tempName = recipe['component_'+i+'_id'];
+			 if(simpleComponentsObj[tempName] != undefined)
+				readableRecipe[simpleComponentsObj[tempName]] = recipe['component_'+i+'_qty']
+			 else{
+				 if(recipeParent[recipe['component_'+i+'_id']] !== undefined && 
+					recipeParent[recipe['component_'+i+'_id']]['name'] !== undefined)
+					
+					readableRecipe[recipeParent[recipe['component_'+i+'_id']]['name']] = {
+					 'recipe_id' : recipe['component_'+i+'_id'],
+					 'qty' : recipe['component_'+i+'_qty']
+				 };
+			 }
+		 }
+		 return readableRecipe;
+	 }
+	 
+	 
+	 var _addToShoppingList = function (id, qty, recipe, type, name){
 		 if(qty == undefined){
 			 qty = 0;
 		 }
@@ -158,6 +234,7 @@ app.get('/add/Recipe', (request, response) => {
 			 if(shoppingList[id] == undefined){
 				 shoppingList[id] = {
 					 'quantity' : qty,
+					 'name' : name,
 					 'recipe': recipe || {},
 					 'type' :  (type || 'simple component')
 				 };
@@ -165,6 +242,7 @@ app.get('/add/Recipe', (request, response) => {
 			 else {
 				 shoppingList[id] = {
 					 'quantity' : parseInt(shoppingList[id]['quantity']) + parseInt(qty),
+					 'name' : name,
 					 'recipe': recipe || {},
 					 'type' : type
 				 }
@@ -184,7 +262,7 @@ app.get('/add/Recipe', (request, response) => {
 			thisRecipe = recipe;
 		});
 		tLevelRecipeStream.on('end', function(){
-			_addToShoppingList(thisRecipe['component_id'], thisRecipe['component_qty'], {
+			_addToShoppingList(thisRecipe['component_id'], thisRecipe['component_qty'],{
 						'component_1_id': thisRecipe['component_1_id'],
 						'component_1_qty':thisRecipe['component_1_qty'],
 						'component_2_id': thisRecipe['component_2_id'],
@@ -193,19 +271,22 @@ app.get('/add/Recipe', (request, response) => {
 						'component_3_qty':thisRecipe['component_3_qty'],
 						'component_4_id': thisRecipe['component_4_id'],
 						'component_4_qty':thisRecipe['component_4_qty'],
-						}, 'top level component');
+						}, 'top level component', '');
 			for(var i = 1; i<=4;i++){
+				//refactor
 				if(simpleComponentsObj[thisRecipe['component_'+i+'_id']] == undefined && 
 				   thisRecipe['component_'+i+'_id'] !== ""){
 					complexComponents.push(thisRecipe['component_'+i+'_id']);
 				}
 				if(thisRecipe['component_'+i+'_id'] !== "")
-					_addToShoppingList(thisRecipe['component_'+i+'_id'], thisRecipe['component_'+i+'_qty']);
+					_addToShoppingList(thisRecipe['component_'+i+'_id'], 
+									   thisRecipe['component_'+i+'_qty'], 
+									   {}, 
+									   'simple component', 
+									   simpleComponentsObj[thisRecipe['component_'+i+'_id']]);
 			}
-			console.log('OOOO', complexComponents);
 			cComponentStream = recipes.find({'component_id':{$in: complexComponents}});
 			cComponentStream.on('data', function(complexComponent){
-			//	console.log(complexComponent['component_id']);
 				_addToShoppingList(complexComponent['component_id'], complexComponent['component_qty'], {
 						'component_1_id': complexComponent['component_1_id'],
 						'component_1_qty':complexComponent['component_1_qty'],
@@ -215,13 +296,11 @@ app.get('/add/Recipe', (request, response) => {
 						'component_3_qty':complexComponent['component_3_qty'],
 						'component_4_id': complexComponent['component_4_id'],
 						'component_4_qty':complexComponent['component_4_qty'],
-						}, 'complex component');
+						}, 'complex component', complexComponent['component_name']);
 				for(var j = 1; j<=4; j++){
 					if(simpleComponentsObj[complexComponent['component_'+j+'_id']] == undefined){
 						complexSubComponents.push(complexComponent['component_'+j+'_id']);
-						/**/
 					}
-					//_addToShoppingList(complexComponent['component_'+j+'_id'],complexComponent['component_'+j+'_qty']);
 				}
 				simpleComponentsObj[complexComponent['component_id']] = complexComponent.component_name;
 				
@@ -238,17 +317,43 @@ app.get('/add/Recipe', (request, response) => {
 						'component_3_qty':CSRecipe['component_3_qty'],
 						'component_4_id': CSRecipe['component_4_id'],
 						'component_4_qty':CSRecipe['component_4_qty'],
-						}, 'complex subcomponent');
+						}, 'complex subcomponent', CSRecipe['component_name']);
 		
-		});
+				});
 				cSComponentStream.on('end', function(){
-					console.log(shoppingList);
-					
+					//TODO: start tracking credits
 					var slKeys = Object.keys(shoppingList);
-					for(var sl = 0; sl < slKeys.length; sl++){
-						//console.log(slKeys[sl], "--->", shoppingList[slKeys[sl]])
+					var hRRecipe = {};
+					var hRReplacements = {}; //if they haven't already built this component.
+					var hRSubComponents = {};
+					for(var sl = 0; sl < slKeys.length; sl++){					
+						switch(shoppingList[slKeys[sl]].type){
+							case 'simple component':
+							   hRRecipe[shoppingList[slKeys[sl]]['name']] = {
+									'qty': shoppingList[slKeys[sl]]['quantity']
+								};
+							break;
+							case 'complex component':
+								hRRecipe[shoppingList[slKeys[sl]]['name']] = {
+									'qty': shoppingList[slKeys[sl]]['quantity'],
+									'replacement_id': slKeys[sl]
+								};
+								hRReplacements[slKeys[sl]] = _readify(shoppingList[slKeys[sl]]['recipe'], shoppingList);
+							break;
+							case 'complex subcomponent':
+							 hRSubComponents[slKeys[sl]] = _readify(shoppingList[slKeys[sl]]['recipe'], shoppingList);
+							break;
+						}
 					}
-					_renderPage();			
+					
+					//console.log('Simple components:');
+					//console.log(hRRecipe);
+					//console.log('how to build the simple components:');
+					//console.log(hRReplacements);
+					//console.log('how to build the complex components:');
+					//console.log(hRSubComponents);					
+					
+					_renderPage(thisRecipe.component_name, hRRecipe, hRReplacements, hRSubComponents);
 				});
 			});
 		});
@@ -256,102 +361,7 @@ app.get('/add/Recipe', (request, response) => {
 });
 	
 	
- app.get('/view/Collectible/:id', (request, response) => {
-	var coll_id = request.params.id;
-
-	function addToSL(comp, qty){
-		 if(shoppingList[comp] == undefined){
-			 shoppingList[comp] = parseInt(qty);
-		 }
-		 else {
-			 shoppingList[comp] = parseInt(shoppingList[comp]) + parseInt(qty);
-		 }
-	 }
-	 var collectibles = _db.collection('Collection');
-	 var components = _db.collection('recipe')
-	 var _me = {};
-	 var simpleComponents = {};
-	 var complexComponents = [];
-	 var recipeComponents = [];
-	 var complexSubComponents = [];
-	 var shoppingList = {};
-	 var collection_name = '';
-		 
-		 
-	var collectibles_stream = collectibles.find({'collection_id' : coll_id});
-	collectibles_stream.on("data", function(collectible){_me = collectible;});
-	collectibles_stream.on("end",function(){
-		collection_name = _me.collection_name;
-		var recipeStream = components.find({'collection_id' : coll_id});
-		recipeStream.on("data", function(recipeObj){
-			recipeComponents.push({'id': recipeObj.component_1_id, 'qty': recipeObj.component_1_qty});
-			recipeComponents.push({'id': recipeObj.component_2_id, 'qty': recipeObj.component_2_qty});
-			recipeComponents.push({'id': recipeObj.component_3_id, 'qty': recipeObj.component_3_qty});
-			recipeComponents.push({'id': recipeObj.component_4_id, 'qty': recipeObj.component_4_qty});
-		});
-		recipeStream.on("end", function(){
-		
-			var simpleStream = components.find({'component_1_qty' : ""});
-			 
-			simpleStream.on("data", function(simpleComponentsObj){simpleComponents[simpleComponentsObj.component_id] = simpleComponentsObj.component_name});
-			simpleStream.on("end",function(){
-			for(var component = 0 ; component < recipeComponents.length; component++){
-				if(simpleComponents[recipeComponents[component].id] != undefined){
-					console.log('simple component found: ' + simpleComponents[recipeComponents[component].id])
-					addToSL(simpleComponents[recipeComponents[component].id], recipeComponents[component].qty)
-					
-				}
-				else {
-					console.log('complex component found: ' + recipeComponents[component].id)
-					complexComponents.push(recipeComponents[component].id)
-				}
-			}
-			
-			var complexStream = components.find({'component_id' : {$in : complexComponents}});
-			complexStream.on('data', function(ccomponent){complexSubComponents.push({
-				"complex_component_name" : ccomponent.component_name, 
-				'components':[
-					{'id': ccomponent.component_1_id, 'qty': ccomponent.component_1_qty},
-					{'id': ccomponent.component_2_id, 'qty': ccomponent.component_2_qty},
-					{'id': ccomponent.component_3_id, 'qty': ccomponent.component_3_qty},
-					{'id': ccomponent.component_4_id, 'qty': ccomponent.component_4_qty},
-					]})});
-			complexStream.on('end', function(){
-				//gotta spiral down again :(
-				for(var complexSubComponent = 0;complexSubComponent  < complexSubComponents.length;complexSubComponent++){
-					var complexSubComponentRecipe = complexSubComponents[complexSubComponent];
-					for(var simpleComponent2 = 0; simpleComponent2 < complexSubComponentRecipe.components.length; simpleComponent2++){
-						if(simpleComponents[complexSubComponentRecipe.components[simpleComponent2].id] != undefined){
-							addToSL(simpleComponents[complexSubComponentRecipe.components[simpleComponent2].id], complexSubComponentRecipe.components[simpleComponent2].qty)
-						}
-						else {
-							//This is a fully built complex component, ie; fang prime blade.
-						}
-					}
-				}
-				
-				 var totalCredits = 0;
-				 //going to take the shopping list and do a lookup on the acquistion.
-				 //ACQUISITIONS: Enemy-{enemy}, Node-{planet}, Invasion-{side}, Relic-{relic}, Dojo-{lab}
-				 //en-grhg (node, grineer heavy gunner)
-				 //nd-vsfa (node, venus-fossa)
-				 //iv-crps (invasion, support the corpus)
-				 //rc-axh1 (relic, axi h1)
-				 //dj-nrgL  (dojo, energy lab)
-				 
-				 //Needs Credit Cost, too
-				
-				});
-			});
-		});
-	});
-	response.render('detail_view', {
-					collection_name: collection_name,
-					partsList: shoppingList,
-					credit_cost: totalCredits
-				});
- });
-
+ 
  app.get('/', (request, response) => {
 	 var acollection = _db.collection('Collection');
 	 var collectionObj = {

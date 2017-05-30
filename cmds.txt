@@ -1,0 +1,14 @@
+mongo cli
+"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe"
+|-> db.createCollection(name, options) //forgot this step
+
+start node
+node "C:\Users\mwenger\Desktop\node playing around\proj-wf\index.js"
+
+start mongodb
+"C:\Program Files\MongoDB\Server\3.4\bin\mongod.exe" -dbpath "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db"
+
+export mongodb as json
+"C:\Program Files\MongoDB\Server\3.4\bin\mongoexport.exe" -dbpath "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db" --db test --collection Collection --out "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db\collection.json"
+
+"C:\Program Files\MongoDB\Server\3.4\bin\mongoexport.exe" --db test --collection Collection --out "C:\Users\mwenger\Desktop\node playing around\proj-wf\data\db\collection.json"

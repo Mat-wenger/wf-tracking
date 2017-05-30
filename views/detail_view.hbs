@@ -6,3 +6,11 @@ TOTAL:<br/>
 {{/each}}
 {{credit_cost}} Credits<br/><br/>
 <title> Namescore </title>
+Requires:<br/>
+{{#each recipe}}
+	{{#recipify @key this @root.subrecipe @root.subsubrecipe}}{{/recipify}}<br/>
+ {{/each}}
+ <script type = "text/javascript">
+ {{#objToJS subrecipe 'components'}}{{/objToJS}}
+ {{#objToJS subsubrecipe 'complex_components'}}{{/objToJS}}
+ </script>
