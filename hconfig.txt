@@ -1,0 +1,5 @@
+=== morning-gorge-52223 Config Vars
+
+MONGODB_URI: mongodb://heroku_cmd1h8gr:6ce231bnccagsf6mhjlpns2hmn@ds157621.mlab.com:57621/heroku_cmd1h8gr
+
+protocol://dbuser:dbpass@host:port/dbname
