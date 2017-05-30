@@ -5,9 +5,8 @@
  const app = express()
  const port = 3000;
  
- console.log(process.env.production);
  var MongoClient = require('mongodb').MongoClient;
-	var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test', 'host' : 'localhost', 'user':'', 'pass':''};
+ var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test', 'host' : 'localhost', 'user':'', 'pass':''};
  if(process.env.production == 'true'){
 	var MongoConnection = {'protocol': 'mongodb', 
 							'port':process.env.PROD_PT, 
@@ -19,8 +18,6 @@
  }
  var _db = {};
 
- console.log(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db);
- return false;
 // Connect to the db
 //protocol://dbuser:dbpass@host:port/dbname
  MongoClient.connect(MongoConnection.protocol + '://' + MongoConnection.user + MongoConnection.pass + MongoConnection.host + ':' + MongoConnection.port + '/' + MongoConnection.db, function(err, db) {
