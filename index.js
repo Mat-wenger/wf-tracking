@@ -457,7 +457,6 @@ app.get('/add/Recipe', (request, response) => {
 		  totalEquipmentMastery: totalEquipmentMastery
 		});			
 		});
-		process.exit();
 	});
 
  
