@@ -5,6 +5,7 @@
  const app = express()
  const port = 3000;
  
+ console.log(process.env.production);
  var MongoClient = require('mongodb').MongoClient;
  if(process.env.production == undefined || process.env.production.indexOf('prod:true') == -1){
 	var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test', 'host' : 'localhost', 'user':'', 'pass':''};
