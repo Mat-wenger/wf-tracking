@@ -7,11 +7,9 @@
  
  console.log(process.env.production);
  var MongoClient = require('mongodb').MongoClient;
- if(process.env.production == 'true'){
 	var MongoConnection = {'protocol' : 'mongodb', 'port': '27017', 'db': 'test', 'host' : 'localhost', 'user':'', 'pass':''};
- }
- else {
-	 var MongoConnection = {'protocol': 'mongodb', 
+ if(process.env.production == 'true'){
+	var MongoConnection = {'protocol': 'mongodb', 
 							'port':process.env.PROD_PT, 
 							'db' :process.env.PROD_DB,
 							'user': process.env.PROD_UN + ':',
