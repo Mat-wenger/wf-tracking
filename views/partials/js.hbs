@@ -1,4 +1,31 @@
 <script type = "text/javascript">
+
+function _ajax(target) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     var myReturn = xhttp.responseText;
+	 document.querySelectorAll('.focus')[0].innerHTML = myReturn;
+    }
+  };
+  xhttp.open("GET", target, true);
+  xhttp.send();
+}
+
+var fetchers = document.querySelectorAll('[name]');
+for (var f = 0; f < fetchers.length; f++){
+   fetchers[f].addEventListener('click', function(event){
+      _ajax(this.getAttribute('href'));
+      document.querySelectorAll('.focus')[0].style.width = "25%";
+	  document.querySelectorAll('.focus')[0].style.float = "left";
+	  
+	  document.querySelectorAll('body .container')[0].style.width = "75%";
+	  document.querySelectorAll('body .container')[0].style.float = "left";
+	  event.preventDefault();
+   return false;
+   });
+}
+
 var interactionElements = document.querySelectorAll('[class*="separator"]:not(.normal-separator)');
 for(var i = 0; i < interactionElements.length; i++){
   interactionElements[i].addEventListener('click', function(){
