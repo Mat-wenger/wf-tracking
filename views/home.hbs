@@ -24,63 +24,152 @@ Total Available master: {{totalEquipmentMastery}}pts.
  <div class="prisma-separator">Prisma Weapons</div>
  <div class="vandal-separator">Vandal Weapons</div>
  <div class="wraith-separator">Wraith Weapons</div>
- <div class="mara-separator"  >Mara Weapons</div>
+ <!-- No Mara Primary currently 
+		<div class="mara-separator"  >Mara Weapons</div>
+ -->
  </div>
  
  <h1>Warframe weapons: Secondary<h2>{{this.secondary_count}}</h2></h1>
- <div class="flexcontainer">
+ <div class="flexcontainer secondaries">
  {{#each secondaries}}
 	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
- <div class="prime-separator">primes</div>
- <div class="prisma-separator">prisma</div>
- <div class="vandal-separator">vandal</div>
- <div class="wraith-separator">wraith</div>
- <div class="mara-separator">mara</div>
+ <div class="normal-separator">Normal Weapons</div>
+ <div class="prime-separator">Prime Weapons</div>
+ <div class="prisma-separator">Prisma Weapons</div>
+ <div class="vandal-separator">Vandal Weapons</div>
+ <div class="wraith-separator">Wraith Weapons</div>
+ <div class="mara-separator">Mara Weapons</div>
  </div>
+ 
  <h1>Warframe weapons: Melee<h2>{{this.melee_count}}</h2></h1>
+ <div class="flexcontainer melee">
  {{#each melee}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
+ <div class="normal-separator">Normal Weapons</div>
+ <div class="prime-separator">Prime Weapons</div>
+ <div class="prisma-separator">Prisma Weapons</div>
+ <div class="vandal-separator">Vandal Weapons</div>
+ <div class="wraith-separator">Wraith Weapons</div>
+ <!-- No Mara Melee currently
+	<div class="mara-separator">Mara Weapons</div>
+ -->
+ </div>
  
  <h1>Living Companions<h2>{{this.pet_count}}</h2></h1>
+ <div class = "flexcontainer">
  {{#each pets}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
+ </div>
  
  <h1>Sentinels<h2>{{this.sentinels_count}}</h2></h1>
+ <div class = "flexcontainer sentinels">
  {{#each sentinels}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
+ <div class="normal-separator">Normal Sentinels</div>
+ <div class="prime-separator">Prime Sentinels</div>
+ <div class="prisma-separator">Prisma Sentinels</div>
+ <!-- No Vandal Sentinel currently
+	<div class="vandal-separator">Vandal Weapons</div>
+ -->	
+ <!-- No Wraith Sentinel currently
+	<div class="wraith-separator">Wraith Weapons</div>
+ -->
+ <!-- No Mara Sentinel currently
+	<div class="mara-separator">Mara Weapons</div>
+ -->
+ </div>
  
  <h1>Sentinel Weapons<h2>{{this.sentinel_pew_pews_count}}</h2></h1>
+ <div class = "flexcontainer sentinel-weapons">
  {{#each this.sentinel_pew_pews}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
+ <div class="normal-separator">Normal Sentinel Weapons</div>
+ <div class="prime-separator">Prime Sentinel Weapons </div>
+ <div class="prisma-separator">Prisma Sentinel Weapons </div>
+ <!-- No Vandal Sentinel currently
+	<div class="vandal-separator">Vandal Sentinel Weapons </div>
+ -->	
+ <!-- No Wraith Sentinel currently 
+	<div class="wraith-separator">Wraith Sentinel Weapons </div>
+ -->
+ <!-- No Mara Sentinel currently
+ 	<div class="mara-separator">Mara Sentinel Weapons </div>
+ -->
+ </div>
  
  <h1>Archwing<h2>{{this.archwings_count}}</h2></h1>
+ <div class = "flexcontainer archwings">
  {{#each this.archwings}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
+ <div class="normal-separator">Normal Archwings</div>
+ <div class="prime-separator">Prime Archwings </div>
+ <!-- No Prisma Archwing currently
+	<div class="prisma-separator">Prisma Sentinel Weapons </div>
+ -->
+ <!-- No Vandal Sentinel currently
+	<div class="vandal-separator">Vandal Sentinel Weapons </div>
+ -->	
+ <!-- No Wraith Sentinel currently 
+	<div class="wraith-separator">Wraith Sentinel Weapons </div>
+ -->
+ <!-- No Mara Sentinel currently
+ 	<div class="mara-separator">Mara Sentinel Weapons </div>
+ -->
+ </div>
  
  <h1>Archwing Weapons: Primary<h2>{{this.archwing_guns_count}}</h2></h1>
+ <div class="flexcontainer awguns">
  {{#each this.archwing_guns}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
+  <div class="normal-separator">Normal Archwing Primaries</div>
+  <!-- No Prime archwing primary currently
+	<div class="prime-separator">Prime Archwing Primaries </div>
+  -->
+ <!-- No Prisma Archwing currently
+	<div class="prisma-separator">Prisma Sentinel Weapons </div>
+ -->
+ <div class="vandal-separator">Vandal Archwing Primaries </div>
+ <!-- No Wraith Sentinel currently 
+	<div class="wraith-separator">Wraith Sentinel Weapons </div>
+ -->
+ <!-- No Mara Sentinel currently
+ 	<div class="mara-separator">Mara Sentinel Weapons </div>
+ -->
+ </div>
  
  <h1>Archwing Weapons: Melee<h2>{{this.archwing_melee_count}}</h2></h1>
+ <div class = "flexcontainer awmele">
  {{#each this.archwing_melee}}
-	<a href = "/view/Collectible/{{this.collection_id}}">{{this.collection_name}}</a>
+	<a href = "/view/Collectible/{{this.collection_id}}" name = "{{this.collection_name}}">{{this.collection_name}}</a>
 	<br/>
  {{/each}}
- 
+  <div class="normal-separator">Normal Archwings</div>
+ <!-- No Prime Archwing Melee currently
+ <div class="prime-separator">Prime Archwings </div>
+ -->
+	<div class="prisma-separator">Prisma Sentinel Weapons </div>
+ <!-- No Vandal Sentinel currently
+	<div class="vandal-separator">Vandal Sentinel Weapons </div>
+ -->	
+ <!-- No Wraith Sentinel currently 
+	<div class="wraith-separator">Wraith Sentinel Weapons </div>
+ -->
+ <!-- No Mara Sentinel currently
+ 	<div class="mara-separator">Mara Sentinel Weapons </div>
+ -->
+ </div>
 </div>
-
-<title> Namescore </title>

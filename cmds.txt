@@ -1,5 +1,5 @@
 mongo cli
-"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe" ds157621.mlab.com:57621/heroku_cmd1h8gr -u <dbuser> -p <dbpassword>
+"C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe" ds157621.mlab.com:57621/heroku_cmd1h8gr -u heroku_cmd1h8gr -p 6ce231bnccagsf6mhjlpns2hmn
 
 "C:\Program Files\MongoDB\Server\3.4\bin\mongo.exe" 
 |-> db.createCollection(name, options) //forgot this step

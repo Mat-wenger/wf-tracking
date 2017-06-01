@@ -21,6 +21,14 @@
  transition-duration:.25s;
  height:1.5em;
  }
+ .flexcontainer [name*="Prime"],
+ .flexcontainer [name*="Vandal"],
+ .flexcontainer [name*="Prisma"],
+ .flexcontainer [name*="Wraith"],
+ .flexcontainer [name*="Mara"]{
+ width:0%;
+ visibility:collapse;
+ }
  .flexcontainer [class*="separator"]{
  height:1.5em;
  width:25%;
@@ -30,19 +38,19 @@
  order:3;
  }
  .flexcontainer [name*="Vandal"]{
- order:4;
+ order:3;
  }
  .flexcontainer [name*="Prisma"]{
- order:5;
+ order:3;
  }
  .flexcontainer [name*="Wraith"]{
- order:6;
+ order:3;
  }
  .flexcontainer [name*="Mara"]{
- order:7;
+ order:3;
  }
  .flexcontainer [name*="Umbra"]{
- order:8;
+ order:3;
  }
  .flexcontainer .normal-separator{
  visibility:collapse;
@@ -51,22 +59,22 @@
  width:0;
  }
 .prime-separator{
- order:9;
+ order:2;
  border: thin solid gold;
 }
  .vandal-separator{
- order:9;
+ order:2;
  border: thin solid blue;
 }
  .prisma-separator{
- order:9;
+ order:2;
  border: thin solid green;
 }
  .wraith-separator{
- order:9;
+ order:2;
  border: thin solid black;
 }
  .mara-separator{
- order:9;
+ order:2;
  border: thin solid red;
 }
