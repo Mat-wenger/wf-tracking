@@ -6,6 +6,11 @@ function _ajax(target) {
     if (this.readyState == 4 && this.status == 200) {
      var myReturn = xhttp.responseText;
 	 document.querySelectorAll('.focus')[0].innerHTML = myReturn;
+	 //eval(document.querySelectorAll('.focus script')[0]);
+	 runScripts = document.querySelectorAll('.focus script');
+	 for(var rs = 0; rs < runScripts.length; rs++){
+	 eval(runScripts[rs].innerHTML);
+	 }
     }
   };
   xhttp.open("GET", target, true);
@@ -22,7 +27,7 @@ for (var f = 0; f < fetchers.length; f++){
 	  document.querySelectorAll('body .container')[0].style.width = "75%";
 	  document.querySelectorAll('body .container')[0].style.float = "left";
 	  event.preventDefault();
-   return false;
+	  return false;
    });
 }
 

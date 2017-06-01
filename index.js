@@ -32,7 +32,7 @@
 	 helpers:{
 		 'objToJS' : function(variable, objName){
 			 objKeys = Object.keys(variable);
-			 var returnString = 'var ' + objName + ' = { '
+			 var returnString = '' + objName + ' = { '
 			 for(var ok = 0; ok < objKeys.length; ok++){
 				 returnString += "'" + objKeys[ok] + "':";
 				 if(typeof variable[objKeys[ok]] == 'object'){
@@ -55,18 +55,23 @@
 						  if(typeof variable == 'object' && variable.replacement_id !== undefined){
 							  var recipeObj = lookup[variable.replacement_id];
 							  var recipeObjKeys = Object.keys(recipeObj);
-							  var returnString = "<div class = 'entry-header' hasChild = 'true' style = 'margin:8px;'>" + "<span style = 'color:blue'>" + variable.qty + ' x ' + key + "</span><br/><div class='entry-body' style = 'margin-left:8px;'>";
+							  var returnString = "<div class = 'entry-header' hasChild = 'true' style = 'margin:8px;'>" + 
+												 "<span style = 'color:blue' acq_id ='" + key + "' rpl_id = '" + variable.replacement_id + "'>" + 
+												 variable.qty + 
+												 ' x ' + 
+												 key + 
+												 "</span><br/><div class='entry-body' style = 'margin-left:8px;'>";
 							  
 							  for(roKeys = 0; roKeys < recipeObjKeys.length; roKeys++){
 								  if(typeof recipeObj[recipeObjKeys[roKeys]] !== 'object')
-									returnString += recipeObj[recipeObjKeys[roKeys]] + ' x ' + recipeObjKeys[roKeys] + '<br/>';
+									returnString += "<span acq_id = '" + recipeObjKeys[roKeys] + "'>" + recipeObj[recipeObjKeys[roKeys]] + ' x ' + recipeObjKeys[roKeys] + '<br/>';
 								  else {
-									  returnString +=  "<span style = 'color:red;'>" + recipeObj[recipeObjKeys[roKeys]].qty + ' x ' + recipeObjKeys[roKeys] + '</span>';
+									  returnString +=  "<span style = 'color:red;' acq_id = '" + key + "'>" + recipeObj[recipeObjKeys[roKeys]].qty + ' x ' + recipeObjKeys[roKeys] + '</span>';
 									  subrecipeObj = sublookup[recipeObj[recipeObjKeys[roKeys]].recipe_id];
 									  subrecipeKeys = Object.keys(subrecipeObj);
 									  returnString += "<div style = 'margin-left:8px;' class='subentry' hasChild = 'true'>";
 									  for(sroKeys = 0; sroKeys < subrecipeKeys.length; sroKeys++){
-										  returnString += subrecipeObj[subrecipeKeys[sroKeys]] + ' x ' + subrecipeKeys[sroKeys] + '<br/>';
+										  returnString += "<span acq_id = '" + subrecipeKeys[sroKeys] + "'"> + subrecipeObj[subrecipeKeys[sroKeys]] + ' x ' + subrecipeKeys[sroKeys] + '<br/>';
 									  }
 									  returnString += "</div>";
 								  }
@@ -74,7 +79,8 @@
 							  returnString += "</div></div>";
 						  }
 						  else {
-							  returnString = "<div class = 'entry' style = 'margin-left:8px;'>" + variable.qty + ' x ' + key + "</div>";
+							  console.log(lookup);
+							  returnString = "<div class = 'entry' style = 'margin-left:8px;' acq_id = '" + key + "'>" + variable.qty + ' x ' + key + "</div>";
 						  }
 					      return returnString;
 					   }
