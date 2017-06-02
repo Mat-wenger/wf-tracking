@@ -1,31 +1,73 @@
 <script type = "text/javascript">
 
+function _fetch(acq_target){
+	//planet || invasion faction || enemy || relic-code
+	console.log(acq_target);
+}
+function _bpLoc(bp_id){
+	//fetch resource drop location/relic/mission type
+//relic || market price || lab price || enemy-code || note {anything else, ie; sign-in reward, invasion faction}
+	console.log('BP:::' + bp_id);
+}
+
 function _ajax(target) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
      var myReturn = xhttp.responseText;
-	 document.querySelectorAll('.focus')[0].innerHTML = myReturn;
-	 //eval(document.querySelectorAll('.focus script')[0]);
-	 runScripts = document.querySelectorAll('.focus script');
+	 document.querySelectorAll('.focus .content')[0].innerHTML = myReturn;
+	 
+	 //This should mostly set the components/complex components object values
+	 runScripts = document.querySelectorAll('.focus script:not(.no-ajax)');
 	 for(var rs = 0; rs < runScripts.length; rs++){
+	 
+	 //This should mostly set the components/complex components object values
 	 eval(runScripts[rs].innerHTML);
+	 //console.log(target.parentNode.className.replace('flexcontainer ', ''));
+	 }
+	 
+	 simple_keys = Object.keys(simple_components);
+	 for(var simple = 0; simple < simple_keys.length; simple++){
+		 simple_component_name = simple_components[simple_keys[simple]];
+		 simple_component_key  = simple_keys[simple];
+		 var simpleElements = document.querySelectorAll('.focus .content .container div:not([isBP]) [acq_id="' + simple_component_name + '"]');
+		 if(simpleElements.length > 0){
+			 for(var simple_element = 0; simple_element < simpleElements.length; simple_element++){
+				 simpleElements[simple_element].setAttribute('fetch_id', simple_component_key);
+				 simpleElements[simple_element].addEventListener('mouseover', function(){
+					_fetch(this.getAttribute('fetch_id'))
+					return false
+				 });
+			 }
+		 }
+		 var complexElements = document.querySelectorAll('.focus .content .container div[isBP] > [acq_id="' + simple_component_name + '"]');
+		 if(complexElements.length > 0){
+			 for(var complex_element = 0; complex_element < complexElements.length; complex_element++){
+				 complexElements[complex_element].addEventListener('mouseover', function(){
+					 _bpLoc(this.getAttribute('rpl_id'));
+				 });
+			 }
+		 }
 	 }
     }
   };
-  xhttp.open("GET", target, true);
+  
+  xhttp.open("GET", target.getAttribute('href'), true);
   xhttp.send();
 }
 
 var fetchers = document.querySelectorAll('[name]');
 for (var f = 0; f < fetchers.length; f++){
    fetchers[f].addEventListener('click', function(event){
-      _ajax(this.getAttribute('href'));
+      _ajax(this);
       document.querySelectorAll('.focus')[0].style.width = "25%";
-	  document.querySelectorAll('.focus')[0].style.float = "left";
+	  document.querySelectorAll('.focus')[0].style.display = 'block';
 	  
 	  document.querySelectorAll('body .container')[0].style.width = "75%";
 	  document.querySelectorAll('body .container')[0].style.float = "left";
+	  
+			//TODO: add close button.
+	  
 	  event.preventDefault();
 	  return false;
    });

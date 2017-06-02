@@ -40,13 +40,13 @@
 					 subKeys = Object.keys(variable[objKeys[ok]]);
 					 for(var sk = 0; sk < subKeys.length; sk++){
 						 if(typeof variable[objKeys[ok]][subKeys[sk]] == 'object')
-							 returnString += "'" + [subKeys[sk]] + "':'" + variable[objKeys[ok]][subKeys[sk]]['recipe_id'] + "'";
+							 returnString += "'" + [subKeys[sk]] + "':'" + variable[objKeys[ok]][subKeys[sk]]['recipe_id'] + "',";
 						 else
-							returnString += "'" + subKeys[sk] + "':" + variable[objKeys[ok]][subKeys[sk]] + ',';
+							returnString += "'" + subKeys[sk] + "':" + "'" + variable[objKeys[ok]][subKeys[sk]] + "',";
 					 }
 					 returnString += '},';
 				 }
-				 else returnString += variable[objKeys[ok]];
+				 else returnString += "'" + variable[objKeys[ok]] + "',";
 			 }
 			 returnString += '};'
 			return returnString;
@@ -55,7 +55,7 @@
 						  if(typeof variable == 'object' && variable.replacement_id !== undefined){
 							  var recipeObj = lookup[variable.replacement_id];
 							  var recipeObjKeys = Object.keys(recipeObj);
-							  var returnString = "<div class = 'entry-header' hasChild = 'true' style = 'margin:8px;'>" + 
+							  var returnString = "<div class = 'entry-header' isBP = 'true' style = 'margin:8px;'>" + 
 												 "<span style = 'color:blue' acq_id ='" + key + "' rpl_id = '" + variable.replacement_id + "'>" + 
 												 variable.qty + 
 												 ' x ' + 
@@ -64,14 +64,14 @@
 							  
 							  for(roKeys = 0; roKeys < recipeObjKeys.length; roKeys++){
 								  if(typeof recipeObj[recipeObjKeys[roKeys]] !== 'object')
-									returnString += "<span acq_id = '" + recipeObjKeys[roKeys] + "'>" + recipeObj[recipeObjKeys[roKeys]] + ' x ' + recipeObjKeys[roKeys] + '<br/>';
+									returnString += "<span acq_id = '" + recipeObjKeys[roKeys] + "'>" + recipeObj[recipeObjKeys[roKeys]] + ' x ' + recipeObjKeys[roKeys] + '</span><br/>';
 								  else {
-									  returnString +=  "<span style = 'color:red;' acq_id = '" + key + "'>" + recipeObj[recipeObjKeys[roKeys]].qty + ' x ' + recipeObjKeys[roKeys] + '</span>';
+									  returnString +=  "<span style = 'color:red;' rpl_id = '" + recipeObj[recipeObjKeys[roKeys]].recipe_id + "' acq_id = '" + key + "'>" + recipeObj[recipeObjKeys[roKeys]].qty + ' x ' + recipeObjKeys[roKeys] + '</span>';
 									  subrecipeObj = sublookup[recipeObj[recipeObjKeys[roKeys]].recipe_id];
 									  subrecipeKeys = Object.keys(subrecipeObj);
-									  returnString += "<div style = 'margin-left:8px;' class='subentry' hasChild = 'true'>";
+									  returnString += "<div style = 'margin-left:8px;' class='subentry' isBP = 'true'>";
 									  for(sroKeys = 0; sroKeys < subrecipeKeys.length; sroKeys++){
-										  returnString += "<span acq_id = '" + subrecipeKeys[sroKeys] + "'"> + subrecipeObj[subrecipeKeys[sroKeys]] + ' x ' + subrecipeKeys[sroKeys] + '<br/>';
+										  returnString += "<span acq_id = '" + subrecipeKeys[sroKeys] + "'>" + subrecipeObj[subrecipeKeys[sroKeys]] + ' x ' + subrecipeKeys[sroKeys] + '</span><br/>';
 									  }
 									  returnString += "</div>";
 								  }
@@ -79,8 +79,7 @@
 							  returnString += "</div></div>";
 						  }
 						  else {
-							  console.log(lookup);
-							  returnString = "<div class = 'entry' style = 'margin-left:8px;' acq_id = '" + key + "'>" + variable.qty + ' x ' + key + "</div>";
+							  returnString = "<div class = 'entry' style = 'margin-left:8px;' acq_id = '" + key + "'><span acq_id = '" + key + "'>" + variable.qty + ' x ' + key + "</span></div>";
 						  }
 					      return returnString;
 					   }
@@ -206,13 +205,14 @@ app.get('/add/Recipe', (request, response) => {
 	var complexComponents = [], complexSubComponents = [];
 	
 	//response.json - needs research but seems pretty useful.
-	var _renderPage = function(name, recipe, subrecipe, subsubrecipe){
+	var _renderPage = function(name, recipe, subrecipe, subsubrecipe, simples){
 	 response.render('detail_view', {
 		 layout:(typeof request.params.ajax === 'undefined'? '' : 'main'),
 						collection_name: name,
 						recipe: recipe,
 						subrecipe: subrecipe,
-						subsubrecipe: subsubrecipe
+						subsubrecipe: subsubrecipe,
+						simples: simples
 					});
 	 };
 	 
@@ -357,14 +357,7 @@ app.get('/add/Recipe', (request, response) => {
 						}
 					}
 					
-					//console.log('Simple components:');
-					//console.log(hRRecipe);
-					//console.log('how to build the simple components:');
-					//console.log(hRReplacements);
-					//console.log('how to build the complex components:');
-					//console.log(hRSubComponents);					
-					
-					_renderPage(thisRecipe.component_name, hRRecipe, hRReplacements, hRSubComponents);
+					_renderPage(thisRecipe.component_name, hRRecipe, hRReplacements, hRSubComponents, simpleComponentsObj);
 				});
 			});
 		});
